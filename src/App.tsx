@@ -259,7 +259,7 @@ export default function App() {
             size="small"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            InputProps={{ startAdornment: <InputAdornment position="start"><Search size={14} color="#6B7280" /></InputAdornment> }}
+            slotProps={{ input: { startAdornment: <InputAdornment position="start"><Search size={14} color="#6B7280" /></InputAdornment> } }}
             sx={{ flex: 1, minWidth: 200, '& .MuiOutlinedInput-root': { borderRadius: '10px', fontSize: '0.8125rem' } }}
           />
           <ToggleButtonGroup

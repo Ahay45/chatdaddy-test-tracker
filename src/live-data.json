@@ -1,0 +1,531 @@
+{
+  "fetchedAt": "2026-04-15T04:15:19.000Z",
+  "branch": "akil/review",
+  "commit": {
+    "sha": "38300dcde62a998317acce65d30b0b594cf23d49",
+    "shortSha": "c52faa5",
+    "message": "feat(localization): wire t() into sidebar nav, settings tabs, and compose bar",
+    "date": "2026-04-15T04:15:14Z"
+  },
+  "recentCommits": [
+    {
+      "sha": "c52faa5",
+      "message": "feat(localization): wire t() into sidebar nav, settings tabs, and compose bar",
+      "date": "2026-04-15T04:15:14Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "9dfd512",
+      "message": "fix(localization): language selector apply button always enabled, active badge, success flash, better preferences UI",
+      "date": "2026-04-15T04:08:22Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "6039fd9",
+      "message": "feat(localization): add 4-locale i18n system with language selector",
+      "date": "2026-04-15T04:01:43Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "d1b17c5",
+      "message": "feat(billing): build complete billing & subscriptions module",
+      "date": "2026-04-15T03:49:38Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "aec41be",
+      "message": "feat(onboarding): build complete cinematic onboarding module",
+      "date": "2026-04-15T03:27:58Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "3394762",
+      "message": "feat(appstore): add 14 ChatDaddy-specific integrations — Shopee, Tokopedia, Lazada, Shopline, Hotmart, Razorpay, Google Forms, Calendly, Booknetic, Hostex",
+      "date": "2026-04-15T03:08:42Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "d0df715",
+      "message": "feat(appstore): notification list table view, message template tab, credentials dialog, external platform banner",
+      "date": "2026-04-15T03:03:40Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "a56213d",
+      "message": "fix(admin): add p:3 padding inside all tab content panels",
+      "date": "2026-04-15T02:55:34Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "ed34f9b",
+      "message": "feat(admin): Pricing Editor (7 sections) + Feature Updates panel + all new tabs registered",
+      "date": "2026-04-15T02:47:18Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "0304c32",
+      "message": "feat(admin): Surveys panel — response list, rating/feature filters, component breakdown dialog, CSV export",
+      "date": "2026-04-15T02:45:49Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "723b791",
+      "message": "feat(admin): Plan Tracking panel, Company Analytics, Company Insights + new tabs",
+      "date": "2026-04-15T02:43:11Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "d77b70b",
+      "message": "feat(admin): Channels panel — platform/state/team filters, WABA quality chips, CSV export",
+      "date": "2026-04-15T02:38:01Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "0d93de7",
+      "message": "feat(admin): Teams 5-tab add/edit drawer (Details, Members, Subscriptions, Features, Onboarding)",
+      "date": "2026-04-15T02:35:29Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "caf412a",
+      "message": "feat(admin): add RedemptionList, ManageSupportPlan to Coupons + Credits",
+      "date": "2026-04-15T02:29:25Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "eba2224",
+      "message": "feat(admin): rebuild Users panel with edit drawer and sub-components",
+      "date": "2026-04-15T02:26:16Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "4a7101a",
+      "message": "feat(admin): rebuild Announcements panel with full editor",
+      "date": "2026-04-15T02:24:22Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "9960748",
+      "message": "feat: rebuild Settings and Billing advanced features",
+      "date": "2026-04-15T02:08:17Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "96652d4",
+      "message": "feat(campaigns): move campaigns into Marketing tab, replace dialog with full page",
+      "date": "2026-04-09T08:52:31Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "9f7bdcc",
+      "message": "fix(campaigns): resolve TypeScript build errors in campaigns module",
+      "date": "2026-04-09T08:49:41Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "a7cab89",
+      "message": "feat: add two-panel filter popover to CRM and automation panels",
+      "date": "2026-04-09T08:34:04Z",
+      "author": "Ahay45"
+    }
+  ],
+  "commitsByDay": [
+    {
+      "date": "2026-04-15",
+      "commits": [
+        {
+          "sha": "c52faa5",
+          "message": "feat(localization): wire t() into sidebar nav, settings tabs, and compose bar",
+          "date": "2026-04-15T04:15:14Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "9dfd512",
+          "message": "fix(localization): language selector apply button always enabled, active badge, success flash, better preferences UI",
+          "date": "2026-04-15T04:08:22Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "6039fd9",
+          "message": "feat(localization): add 4-locale i18n system with language selector",
+          "date": "2026-04-15T04:01:43Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "d1b17c5",
+          "message": "feat(billing): build complete billing & subscriptions module",
+          "date": "2026-04-15T03:49:38Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "aec41be",
+          "message": "feat(onboarding): build complete cinematic onboarding module",
+          "date": "2026-04-15T03:27:58Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "3394762",
+          "message": "feat(appstore): add 14 ChatDaddy-specific integrations — Shopee, Tokopedia, Lazada, Shopline, Hotmart, Razorpay, Google Forms, Calendly, Booknetic, Hostex",
+          "date": "2026-04-15T03:08:42Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "d0df715",
+          "message": "feat(appstore): notification list table view, message template tab, credentials dialog, external platform banner",
+          "date": "2026-04-15T03:03:40Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "a56213d",
+          "message": "fix(admin): add p:3 padding inside all tab content panels",
+          "date": "2026-04-15T02:55:34Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "ed34f9b",
+          "message": "feat(admin): Pricing Editor (7 sections) + Feature Updates panel + all new tabs registered",
+          "date": "2026-04-15T02:47:18Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "0304c32",
+          "message": "feat(admin): Surveys panel — response list, rating/feature filters, component breakdown dialog, CSV export",
+          "date": "2026-04-15T02:45:49Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "723b791",
+          "message": "feat(admin): Plan Tracking panel, Company Analytics, Company Insights + new tabs",
+          "date": "2026-04-15T02:43:11Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "d77b70b",
+          "message": "feat(admin): Channels panel — platform/state/team filters, WABA quality chips, CSV export",
+          "date": "2026-04-15T02:38:01Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "0d93de7",
+          "message": "feat(admin): Teams 5-tab add/edit drawer (Details, Members, Subscriptions, Features, Onboarding)",
+          "date": "2026-04-15T02:35:29Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "caf412a",
+          "message": "feat(admin): add RedemptionList, ManageSupportPlan to Coupons + Credits",
+          "date": "2026-04-15T02:29:25Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "eba2224",
+          "message": "feat(admin): rebuild Users panel with edit drawer and sub-components",
+          "date": "2026-04-15T02:26:16Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "4a7101a",
+          "message": "feat(admin): rebuild Announcements panel with full editor",
+          "date": "2026-04-15T02:24:22Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "9960748",
+          "message": "feat: rebuild Settings and Billing advanced features",
+          "date": "2026-04-15T02:08:17Z",
+          "author": "Ahay45"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-09",
+      "commits": [
+        {
+          "sha": "96652d4",
+          "message": "feat(campaigns): move campaigns into Marketing tab, replace dialog with full page",
+          "date": "2026-04-09T08:52:31Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "9f7bdcc",
+          "message": "fix(campaigns): resolve TypeScript build errors in campaigns module",
+          "date": "2026-04-09T08:49:41Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "a7cab89",
+          "message": "feat: add two-panel filter popover to CRM and automation panels",
+          "date": "2026-04-09T08:34:04Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "d453fd0",
+          "message": "feat: add rebuild tracker dashboard at /rebuild-tracker",
+          "date": "2026-04-09T07:58:30Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "5124d1f",
+          "message": "feat(inbox): wire full filter functionality from v1 — channels, tags AND/OR, assignee, date range",
+          "date": "2026-04-09T06:59:55Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "263726c",
+          "message": "fix(ci): ignore ui-prototype in prettier, add webServer for e2e CI",
+          "date": "2026-04-09T06:47:08Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "ec0b302",
+          "message": "fix(ci): resolve e2e no-tests failure, enforce prettier via husky pre-commit hook",
+          "date": "2026-04-09T06:41:12Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "db59d44",
+          "message": "fix(ci): raise chunk limit to 1000KB for vendor-chatdaddy (generated API client)",
+          "date": "2026-04-09T04:55:23Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "9a3f322",
+          "message": "fix(typecheck): resolve exactOptionalPropertyTypes error in FilterPanel tags mapping",
+          "date": "2026-04-09T04:52:06Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "d2f900e",
+          "message": "fix(inbox): use distinct chat area background to prevent blending with page bg",
+          "date": "2026-04-09T04:49:26Z",
+          "author": "Ahay45"
+        }
+      ]
+    }
+  ],
+  "registeredRoutes": [
+    "/auth",
+    "/login",
+    "/",
+    "/inbox",
+    "/crm",
+    "/broadcasts",
+    "/flows",
+    "/dashboard",
+    "/settings",
+    "/admin",
+    "/channels",
+    "/calls",
+    "/tools",
+    "/ai",
+    "/appstore",
+    "/shops",
+    "/billing",
+    "/onboarding",
+    "/onboarding/forgot-password",
+    "/onboarding/reset-password",
+    "/rebuild-tracker"
+  ],
+  "modules": {
+    "admin": {
+      "id": "admin",
+      "fileCount": 14,
+      "componentCount": 10,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "ai": {
+      "id": "ai",
+      "fileCount": 9,
+      "componentCount": 5,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "appstore": {
+      "id": "appstore",
+      "fileCount": 6,
+      "componentCount": 2,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "auth": {
+      "id": "auth",
+      "fileCount": 7,
+      "componentCount": 1,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "automation": {
+      "id": "automation",
+      "fileCount": 15,
+      "componentCount": 11,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "billing": {
+      "id": "billing",
+      "fileCount": 35,
+      "componentCount": 28,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "broadcasts": {
+      "id": "broadcasts",
+      "fileCount": 11,
+      "componentCount": 7,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "calls": {
+      "id": "calls",
+      "fileCount": 7,
+      "componentCount": 3,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "campaigns": {
+      "id": "campaigns",
+      "fileCount": 10,
+      "componentCount": 6,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": false,
+      "isEmpty": false,
+      "files": []
+    },
+    "channels": {
+      "id": "channels",
+      "fileCount": 16,
+      "componentCount": 11,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "crm": {
+      "id": "crm",
+      "fileCount": 14,
+      "componentCount": 9,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "dashboard": {
+      "id": "dashboard",
+      "fileCount": 7,
+      "componentCount": 3,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "flow-builder": {
+      "id": "flow-builder",
+      "fileCount": 0,
+      "componentCount": 0,
+      "hasStore": false,
+      "hasQueries": false,
+      "hasRoute": false,
+      "isEmpty": true,
+      "files": []
+    },
+    "inbox": {
+      "id": "inbox",
+      "fileCount": 16,
+      "componentCount": 11,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "onboarding": {
+      "id": "onboarding",
+      "fileCount": 38,
+      "componentCount": 30,
+      "hasStore": true,
+      "hasQueries": false,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "settings": {
+      "id": "settings",
+      "fileCount": 18,
+      "componentCount": 14,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "shops": {
+      "id": "shops",
+      "fileCount": 11,
+      "componentCount": 7,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "tools": {
+      "id": "tools",
+      "fileCount": 12,
+      "componentCount": 8,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "analytics": {
+      "id": "analytics",
+      "fileCount": 15,
+      "componentCount": 12,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": []
+    },
+    "localization": {
+      "id": "localization",
+      "fileCount": 8,
+      "componentCount": 3,
+      "hasStore": true,
+      "hasQueries": false,
+      "hasRoute": false,
+      "isEmpty": false,
+      "files": []
+    }
+  }
+}
