@@ -1616,6 +1616,136 @@ const STATIC: Record<string, StaticConfig> = {
     notes: 'P3 deferred — largest old module (198 files). Needs full rebuild from scratch using ReactFlow v11+. Full detail inventory: 27 categories, 150+ sub-features.',
   },
 
+  'status-page': {
+    label: 'Status Page',
+    icon: '🟢',
+    category: 'missing',
+    status: 'not-started',
+    progress: 0,
+    oldFileCount: 0,
+    subFeatures: [
+      // ── Public Status Page (status.chatdaddy.com) ────────────────────────
+      { name: 'Standalone public URL (status.chatdaddy.com)', done: false },
+      { name: 'Overall system status banner (Operational / Degraded Performance / Partial Outage / Major Outage)', done: false },
+      { name: 'Status banner color coding (green / yellow / orange / red)', done: false },
+      { name: 'Auto-refresh page every 60 seconds without full reload', done: false },
+      { name: 'Last updated timestamp displayed', done: false },
+      { name: 'Favicon updates to reflect current status (green dot / red dot)', done: false },
+
+      // ── Component Status Grid ─────────────────────────────────────────────
+      { name: 'Per-component status list (each service as a row)', done: false },
+      { name: 'Component: Dashboard (web app)', done: false },
+      { name: 'Component: API (REST endpoints)', done: false },
+      { name: 'Component: WhatsApp Messaging (message delivery)', done: false },
+      { name: 'Component: WhatsApp Channels (channel connections)', done: false },
+      { name: 'Component: Webhook Delivery', done: false },
+      { name: 'Component: Automation / Flow Builder execution', done: false },
+      { name: 'Component: Broadcast / Campaign delivery', done: false },
+      { name: 'Component: AI Chatbot / AI features', done: false },
+      { name: 'Component: CRM / Contacts sync', done: false },
+      { name: 'Component: Billing & Payments', done: false },
+      { name: 'Component: Media Upload / File Storage', done: false },
+      { name: 'Component: Real-time / WebSocket connections', done: false },
+      { name: 'Component status icon per row (Operational / Degraded / Outage / Maintenance)', done: false },
+      { name: 'Component group / category collapsing (e.g. "Core Platform", "Messaging", "Integrations")', done: false },
+      { name: 'Sub-component expand (e.g. API → REST v1, REST v2, Webhooks)', done: false },
+
+      // ── Uptime History Bar (90-day chart) ─────────────────────────────────
+      { name: 'Uptime history bar — 90-day daily squares per component', done: false },
+      { name: 'Color-coded daily squares (green = 100%, yellow = degraded, red = outage, grey = no data)', done: false },
+      { name: 'Hover tooltip on each day square showing date + uptime %', done: false },
+      { name: 'Uptime percentage label for last 90 days (e.g. "99.87% uptime")', done: false },
+      { name: 'Toggle: 30-day / 60-day / 90-day uptime view', done: false },
+
+      // ── Active Incidents Banner ────────────────────────────────────────────
+      { name: 'Active incident banner at top (shown only when incident is open)', done: false },
+      { name: 'Incident severity badge (Investigating / Identified / Monitoring / Resolved)', done: false },
+      { name: 'Incident title and latest update in banner', done: false },
+      { name: 'Link from banner to full incident detail', done: false },
+      { name: 'Multiple simultaneous incidents stacked in banner', done: false },
+
+      // ── Incident List (public) ────────────────────────────────────────────
+      { name: 'Incident history section below components', done: false },
+      { name: 'Incidents grouped by date (Today, This week, Past incidents)', done: false },
+      { name: 'Incident row — title, affected components, status badge, duration', done: false },
+      { name: 'Incident detail page (full timeline of updates)', done: false },
+      { name: 'Incident update timeline — each update with timestamp and message', done: false },
+      { name: 'Incident resolution time displayed', done: false },
+      { name: 'Affected components listed per incident', done: false },
+      { name: 'Load more / paginate older incidents', done: false },
+
+      // ── Scheduled Maintenance ─────────────────────────────────────────────
+      { name: 'Upcoming scheduled maintenance section', done: false },
+      { name: 'Maintenance card — title, affected components, start/end time, timezone', done: false },
+      { name: 'Maintenance status: Scheduled / In Progress / Completed', done: false },
+      { name: 'Maintenance countdown ("Starts in 2 hours")', done: false },
+      { name: 'Past maintenance history section', done: false },
+
+      // ── Subscribe to Updates ──────────────────────────────────────────────
+      { name: 'Subscribe button on public page', done: false },
+      { name: 'Email subscription — enter email to receive incident alerts', done: false },
+      { name: 'Email subscription — confirm via email verification link', done: false },
+      { name: 'Email subscription — manage / unsubscribe link in emails', done: false },
+      { name: 'Webhook subscription — enter URL to receive POST on incident events', done: false },
+      { name: 'RSS / Atom feed for incident history', done: false },
+      { name: 'Slack integration — subscribe a Slack channel to updates', done: false },
+
+      // ── Notification Emails ───────────────────────────────────────────────
+      { name: 'Email alert: incident opened (with title, severity, affected components)', done: false },
+      { name: 'Email alert: incident updated (status change, new message)', done: false },
+      { name: 'Email alert: incident resolved', done: false },
+      { name: 'Email alert: scheduled maintenance reminder (24h before)', done: false },
+      { name: 'Email alert: maintenance started / completed', done: false },
+      { name: 'ChatDaddy-branded email template', done: false },
+
+      // ── Embed Widget ──────────────────────────────────────────────────────
+      { name: 'Embeddable status widget (script tag for external sites)', done: false },
+      { name: 'Widget: small floating badge (green/red dot + "All systems operational")', done: false },
+      { name: 'Widget: expand on click to show component list', done: false },
+      { name: 'Widget: position config (bottom-left / bottom-right)', done: false },
+      { name: 'Widget: custom theme (light / dark)', done: false },
+      { name: 'Widget integrated into the ChatDaddy dashboard app (replaces current statuspage.io embed)', done: false },
+
+      // ── Admin Panel (internal — manage incidents) ─────────────────────────
+      { name: 'Admin status page route (settings or separate /admin/status)', done: false },
+      { name: 'Admin — create new incident (title, severity, affected components, initial message)', done: false },
+      { name: 'Admin — update incident status (Investigating → Identified → Monitoring → Resolved)', done: false },
+      { name: 'Admin — add update message to existing incident', done: false },
+      { name: 'Admin — resolve / close incident', done: false },
+      { name: 'Admin — schedule maintenance (title, start, end, affected components, message)', done: false },
+      { name: 'Admin — update / cancel scheduled maintenance', done: false },
+      { name: 'Admin — manually set component status (override automatic detection)', done: false },
+      { name: 'Admin — view subscriber list (emails, webhooks)', done: false },
+      { name: 'Admin — send manual notification to all subscribers', done: false },
+      { name: 'Admin — incident history list with search and filter', done: false },
+
+      // ── Automatic Health Monitoring ───────────────────────────────────────
+      { name: 'Automated health checks — ping API endpoint every N minutes', done: false },
+      { name: 'Automated health checks — ping dashboard URL for 200 OK', done: false },
+      { name: 'Automated health checks — check WhatsApp message delivery latency', done: false },
+      { name: 'Auto-create incident when check fails 3× in a row', done: false },
+      { name: 'Auto-resolve incident when check passes 3× in a row', done: false },
+      { name: 'Health check history stored (for uptime % calculation)', done: false },
+      { name: 'Configurable check interval per component (1 min / 5 min / 15 min)', done: false },
+      { name: 'Alert team via Lark / Slack when auto-incident is created', done: false },
+
+      // ── Metrics & SLAs ────────────────────────────────────────────────────
+      { name: 'SLA uptime target per component (e.g. 99.9%)', done: false },
+      { name: 'Monthly uptime report (total incidents, total downtime minutes, SLA met/missed)', done: false },
+      { name: 'Response time metrics (P50 / P95 / P99 API latency)', done: false },
+      { name: 'Historical uptime data stored in DB (not just 90-day UI window)', done: false },
+
+      // ── UI / Design ───────────────────────────────────────────────────────
+      { name: 'Dark mode support', done: false },
+      { name: 'Light mode (default for public status page)', done: false },
+      { name: 'Responsive layout (mobile-friendly)', done: false },
+      { name: 'ChatDaddy branding (logo, colors, domain)', done: false },
+      { name: 'Smooth loading skeleton while fetching data', done: false },
+      { name: 'Animated status icon (pulsing green dot when operational)', done: false },
+    ],
+    notes: 'Net-new feature — old app only embedded external statuspage.io widget. Build natively in v2 as a public-facing page at status.chatdaddy.com. Requires backend API for incident management and health checks.',
+  },
+
   notifications: {
     label: 'Webhooks / Notifications',
     icon: '🔔',
