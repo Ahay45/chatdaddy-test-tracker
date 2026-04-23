@@ -1,13 +1,25 @@
 {
-  "fetchedAt": "2026-04-23T05:28:21.805Z",
+  "fetchedAt": "2026-04-23T09:02:59.708Z",
   "branch": "main",
   "commit": {
-    "sha": "61973dbc6c7b1eb5585e36936c10e22d8c1c30c5",
-    "shortSha": "61973db",
-    "message": "Merge pull request #15 from chatdaddy/inbox-changes-fix",
-    "date": "2026-04-23T04:39:03Z"
+    "sha": "c9a751e9fdaa6cde07cccfac40df0003c4ebd543",
+    "shortSha": "c9a751e",
+    "message": "Merge pull request #16 from chatdaddy/channel-fixes",
+    "date": "2026-04-23T08:54:28Z"
   },
   "recentCommits": [
+    {
+      "sha": "c9a751e9fdaa6cde07cccfac40df0003c4ebd543",
+      "message": "Merge pull request #16 from chatdaddy/channel-fixes",
+      "date": "2026-04-23T08:54:28Z",
+      "author": "Ahay45"
+    },
+    {
+      "sha": "cf27973b9ac4c82cf88d8c6d22c8da12ff36a4ba",
+      "message": "feat: enhance onboarding dialogs with error handling and display",
+      "date": "2026-04-23T08:38:47Z",
+      "author": "Ahay45"
+    },
     {
       "sha": "61973dbc6c7b1eb5585e36936c10e22d8c1c30c5",
       "message": "Merge pull request #15 from chatdaddy/inbox-changes-fix",
@@ -115,24 +127,24 @@
       "message": "feat(inbox): remove saved filters section from Assignee, show plain member list",
       "date": "2026-04-20T05:57:47Z",
       "author": "Ahay45"
-    },
-    {
-      "sha": "afdb5442b6d78d4a5b449c446fdedd05ab0172c2",
-      "message": "feat(inbox): assignee section badge always shows 1 when any filter is active",
-      "date": "2026-04-20T05:54:34Z",
-      "author": "Ahay45"
-    },
-    {
-      "sha": "c33ff96a02b6fff80405679dd750b3c871ace988",
-      "message": "feat(inbox): hide assignee list when a saved filter is active",
-      "date": "2026-04-20T05:49:06Z",
-      "author": "Ahay45"
     }
   ],
   "commitsByDay": [
     {
       "date": "2026-04-23",
       "commits": [
+        {
+          "sha": "c9a751e9fdaa6cde07cccfac40df0003c4ebd543",
+          "message": "Merge pull request #16 from chatdaddy/channel-fixes",
+          "date": "2026-04-23T08:54:28Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "cf27973b9ac4c82cf88d8c6d22c8da12ff36a4ba",
+          "message": "feat: enhance onboarding dialogs with error handling and display",
+          "date": "2026-04-23T08:38:47Z",
+          "author": "Ahay45"
+        },
         {
           "sha": "61973dbc6c7b1eb5585e36936c10e22d8c1c30c5",
           "message": "Merge pull request #15 from chatdaddy/inbox-changes-fix",
@@ -445,18 +457,6 @@
           "message": "fix(ci): remove @chatdaddy/eslint-config dep — rules already inlined",
           "date": "2026-04-16T04:30:20Z",
           "author": "Aseem Khandekar"
-        },
-        {
-          "sha": "9b857610899a4baa58692e279b020626f7f40268",
-          "message": "fix(ci): use explicit git+https URL for eslint-config in package.json",
-          "date": "2026-04-16T04:27:40Z",
-          "author": "Aseem Khandekar"
-        },
-        {
-          "sha": "8d6bc2a18aa8b6d61ed18ac859a6534ea5be7fca",
-          "message": "fix(ci): change eslint-config resolved URL to HTTPS in lock file",
-          "date": "2026-04-16T04:24:10Z",
-          "author": "Aseem Khandekar"
         }
       ]
     }
@@ -730,8 +730,8 @@
     },
     "channels": {
       "id": "channels",
-      "fileCount": 27,
-      "componentCount": 23,
+      "fileCount": 31,
+      "componentCount": 25,
       "hasStore": false,
       "hasQueries": true,
       "hasRoute": true,
@@ -747,11 +747,13 @@
         "src/modules/channels/components/ConnectionAlertBanner.tsx",
         "src/modules/channels/components/DeleteChannelDialog.tsx",
         "src/modules/channels/components/IsvTermsDialog.tsx",
+        "src/modules/channels/components/PageSelectDialog.tsx",
         "src/modules/channels/components/PendingMessagesModal.tsx",
         "src/modules/channels/components/ReconnectModal.tsx",
         "src/modules/channels/components/SenderIdDialog.tsx",
         "src/modules/channels/components/VerifyPhoneDialog.tsx",
         "src/modules/channels/components/WabaCreatingAccountModal.tsx",
+        "src/modules/channels/components/WabaPhoneSelectDialog.tsx",
         "src/modules/channels/components/onboarding/EmailOnboardingDialog.tsx",
         "src/modules/channels/components/onboarding/InstagramOnboardingDialog.tsx",
         "src/modules/channels/components/onboarding/MessengerOnboardingDialog.tsx",
@@ -835,7 +837,7 @@
     },
     "inbox": {
       "id": "inbox",
-      "fileCount": 50,
+      "fileCount": 51,
       "componentCount": 40,
       "hasStore": true,
       "hasQueries": true,

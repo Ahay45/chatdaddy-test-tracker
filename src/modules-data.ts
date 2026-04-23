@@ -411,7 +411,7 @@ const STATIC: Record<string, StaticConfig> = {
       { name: 'Message bubbles redesign (SaaS aesthetic)', done: true },
       { name: 'Profile image view', done: true },
     ],
-    notes: 'Inbox 96% complete. New: PaymentRequestDialog (WA Pay), CatalogSendDialog (WA Shop), ExportGroupMembersDialog, ManageCustomFieldsDialog, private reply (note mode), view-in-thread, stop broadcast, note creator name display, DnD reorderable profile sections (HTML5 drag), all 7 InboxSettings toggles wired. Profile tab now has: message metrics, active hours chart, linked orders, group participants, admin panel (isAdmin-gated), manage custom fields. Remaining: WA inline QR/OTP/sync pages, automation tab automations list, filter panel CRM stage + custom fields.',
+    notes: 'Inbox 97% complete. PR #15 (2026-04-23): inline date range calendar with presets, useUnreadState hook (manualUnreadIds in store, mark/unmark read), ChatRow + ChatList refactor, FilterPanel date filter uses ISO timestamps. PR #16 (2026-04-23): formatJid.ts utility for formatted phone/display names in ChatDetail + ChatList. Remaining: WA inline QR/OTP/sync pages, filter panel CRM stage + custom fields.',
   },
 
   crm: {
@@ -513,9 +513,15 @@ const STATIC: Record<string, StaticConfig> = {
       { name: 'Delete channel dialog', done: true },
       { name: 'Delete WhatsApp channel specific flow', done: false },
       { name: 'QR scan onboarding (WhatsApp web)', done: true },
+      { name: 'WABA onboarding — embedded signup hook (useWabaEmbeddedSignup)', done: true },
+      { name: 'WABA onboarding — phone number selection dialog (WabaPhoneSelectDialog)', done: true },
       { name: 'WABA onboarding dialog', done: true },
       { name: 'Instagram onboarding dialog', done: true },
+      { name: 'Instagram onboarding — error handling + alert display', done: true },
       { name: 'Messenger onboarding dialog', done: true },
+      { name: 'Messenger onboarding — OAuth hook (useMessengerOAuth)', done: true },
+      { name: 'Messenger onboarding — error handling + alert display', done: true },
+      { name: 'Messenger/Instagram page select dialog (unified PageSelectDialog)', done: true },
       { name: 'Messenger page select dialog', done: true },
       { name: 'SMS onboarding dialog', done: true },
       { name: 'Email onboarding dialog (sender config)', done: true },
@@ -551,7 +557,7 @@ const STATIC: Record<string, StaticConfig> = {
       { name: 'Advanced info — remove data (danger zone)', done: true },
       { name: 'Credit map display per channel type', done: true },
     ],
-    notes: 'Full rebuild complete. ChannelSettingsDialog: all 8 sections done (sync/history, WABA settings with real welcome message toggle via AlibabaCamsApi + 24h window, auto-assign, automation, comment moderation, privacy, advanced incl. geo location, danger zone with clear queue + remove data). Welcome message bug fixed — now calls alibabaCamsProfileUpdate correctly.',
+    notes: 'Full rebuild complete. PR #16 (2026-04-23): WabaPhoneSelectDialog (phone picker in WABA embedded signup), PageSelectDialog (unified Instagram+Messenger page picker), useWabaEmbeddedSignup hook, useMessengerOAuth hook, error handling + Alert display in Instagram/Messenger onboarding dialogs, retries on transient errors in channels.queries.ts. RouteErrorBoundary added to app router. Remaining: Delete WhatsApp channel specific flow (generic DeleteChannelDialog exists but no WA logout step).',
   },
 
   calls: {

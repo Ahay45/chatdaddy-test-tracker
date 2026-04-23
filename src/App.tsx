@@ -69,7 +69,7 @@ const KEYWORD_MAP: Array<{ words: string[]; module: string }> = [
   { words: ['inbox', 'chat', 'compose', 'message', 'filter', 'assign', 'tag', 'reply', 'thread', 'composeBar', 'chatrow', 'chatlist', 'chatdetail'], module: 'inbox' },
   { words: ['crm', 'ticket', 'board', 'kanban', 'bulkcontact', 'contactdetail', 'contactsfilter'], module: 'crm' },
   { words: ['contact', 'contactpanel', 'activehourscard'], module: 'contacts' },
-  { words: ['channel', 'waba', 'qrscan', 'phonelink', 'creditconfirm', 'onboarding', 'channelcredit'], module: 'channels' },
+  { words: ['channel', 'waba', 'qrscan', 'phonelink', 'creditconfirm', 'onboarding', 'channelcredit', 'messenger', 'instagram', 'pageselect', 'wabaphoneselect', 'embeddedSignup', 'messengerOAuth', 'isvterms'], module: 'channels' },
   { words: ['automation', 'keyword', 'flow', 'bot', 'trigger'], module: 'automation' },
   { words: ['broadcast', 'campaign'], module: 'broadcasts' },
   { words: ['campaign'], module: 'campaigns' },
