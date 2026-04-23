@@ -372,10 +372,10 @@ const STATIC: Record<string, StaticConfig> = {
       { name: 'Profile tab — admin panel section (admin-only)', done: true },
       { name: 'Profile tab — drag-and-drop reorderable sections', done: true },
       { name: 'Notes tab (internal team notes)', done: true },
-      { name: 'Automation tab — active automations list', done: false },
-      { name: 'Automation tab — pending bot fire records', done: false },
-      { name: 'Automation tab — pause / resume bot', done: false },
-      { name: 'Automation tab — bot picker for manual trigger', done: false },
+      { name: 'Automation tab — active automations list', done: true },
+      { name: 'Automation tab — pending bot fire records', done: true },
+      { name: 'Automation tab — pause / resume bot', done: true },
+      { name: 'Automation tab — bot picker for manual trigger', done: true },
 
       // ── Compose extras ────────────────────────────────────────────────────
       { name: 'Internal note compose mode (toggle to send internal note vs message)', done: true },
@@ -2295,6 +2295,24 @@ const STATIC: Record<string, StaticConfig> = {
       { name: 'Toast system — auto-dismiss', done: true },
     ],
     notes: 'Full error scenario inventory from old app (20 source files). Covers: error boundary/crash pages, empty states (14 types), API error parser (13 HTTP codes), form validation (15 rules), auth/OTP errors (14 cases), WebSocket errors, file upload errors (9 cases), inline op errors, permission errors, channel/WABA errors (12 cases), billing errors (9 cases), flow builder errors, CRM/inbox content errors, and toast system.',
+  },
+
+  contacts: {
+    label: 'Contacts',
+    icon: '🙋',
+    category: 'core',
+    status: 'in-progress',
+    progress: 0,
+    oldFileCount: 0,
+    subFeatures: [
+      { name: 'Contact detail panel (standalone page)', done: true },
+      { name: 'Contact active hours heatmap card', done: true },
+      { name: 'Contact custom fields display', done: false },
+      { name: 'Contact linked tickets', done: false },
+      { name: 'Contact linked messages', done: false },
+      { name: 'Contact inline edit (name, phone, tags, assignee)', done: false },
+    ],
+    notes: 'New standalone contacts module (split from CRM). ContactDetailPanel and ContactActiveHoursCard are on main. Remaining contact-specific sub-pages TBD.',
   },
 }
 
