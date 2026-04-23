@@ -251,121 +251,143 @@ function ModuleCard({
   )
 }
 
-// ─── Phase 2 — commit row ─────────────────────────────────────────────────────
+// ─── Phase 2 — sub-feature row ───────────────────────────────────────────────
 
-function CommitRow({ commit }: { commit: CommitWithModule }) {
-  const meta = MODULE_META[commit.module]
-  const color = meta?.color ?? '#6B7280'
-  const label = meta ? `${meta.icon} ${meta.label}` : '🔧 General'
-  const time = new Date(commit.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-
-  // strip "Merge pull request #N from org/branch" lines
-  const isMerge = commit.message.startsWith('Merge pull request')
-  const bodyLine = isMerge
-    ? commit.message.replace(/^Merge pull request #\d+ from [^\n]+\n?/, '').trim() || commit.message
-    : commit.message
-
+function Phase2FeatureRow({ name, done }: { name: string; done: boolean }) {
   return (
     <Box sx={{
-      display: 'flex', alignItems: 'flex-start', gap: 1.5,
-      px: 2, py: 1,
-      borderBottom: '1px solid', borderColor: alpha('#fff', 0.04),
+      display: 'flex', alignItems: 'flex-start', gap: 1,
+      px: 2, py: 0.625,
+      borderBottom: '1px solid', borderColor: alpha('#fff', 0.035),
       '&:last-child': { borderBottom: 'none' },
-      opacity: isMerge ? 0.45 : 1,
     }}>
-      <Box sx={{ color: alpha('#fff', 0.2), mt: 0.15, flexShrink: 0 }}>
-        <GitCommit size={13} />
+      <Box sx={{ mt: 0.2, flexShrink: 0, color: done ? '#10B981' : alpha('#fff', 0.2) }}>
+        {done ? <CheckCircle2 size={13} /> : <MinusCircle size={13} />}
       </Box>
-      <Box sx={{ flex: 1, minWidth: 0 }}>
-        <Typography sx={{ fontSize: '0.8rem', lineHeight: 1.45, wordBreak: 'break-word' }}>
-          {bodyLine}
-        </Typography>
-        <Box sx={{ display: 'flex', gap: 0.75, mt: 0.4, flexWrap: 'wrap', alignItems: 'center' }}>
-          <Typography sx={{ fontSize: '0.6375rem', color: alpha('#fff', 0.3), fontFamily: 'monospace' }}>
-            {commit.sha.slice(0, 7)}
-          </Typography>
-          <Typography sx={{ fontSize: '0.6375rem', color: alpha('#fff', 0.25) }}>·</Typography>
-          <Typography sx={{ fontSize: '0.6375rem', color: alpha('#fff', 0.3) }}>{time}</Typography>
-        </Box>
-      </Box>
-      <Chip
-        label={label}
-        size="small"
-        sx={{ height: 18, fontSize: '0.5rem', fontWeight: 700, flexShrink: 0,
-          bgcolor: alpha(color, 0.12), color, borderRadius: '5px', mt: 0.15 }}
-      />
+      <Typography sx={{ fontSize: '0.775rem', lineHeight: 1.45, color: done ? 'text.primary' : alpha('#fff', 0.35) }}>
+        {name}
+      </Typography>
     </Box>
   )
 }
 
-// ─── Phase 2 — module group card ─────────────────────────────────────────────
+// ─── Phase 2 — commit chip row ────────────────────────────────────────────────
 
-function Phase2ModuleGroup({
-  moduleId, commits,
-}: {
-  moduleId: string
-  commits: CommitWithModule[]
-  date: string
-}) {
+function CommitChip({ commit }: { commit: CommitWithModule }) {
+  const isMerge = commit.message.startsWith('Merge pull request')
+  if (isMerge) return null
+  const time = new Date(commit.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+  return (
+    <Box sx={{
+      display: 'flex', alignItems: 'center', gap: 1,
+      px: 2, py: 0.75,
+      borderBottom: '1px solid', borderColor: alpha('#fff', 0.035),
+      '&:last-child': { borderBottom: 'none' },
+    }}>
+      <GitCommit size={12} color={alpha('#fff', 0.25)} style={{ flexShrink: 0 }} />
+      <Typography sx={{ flex: 1, fontSize: '0.775rem', lineHeight: 1.4 }}>{commit.message}</Typography>
+      <Typography sx={{ fontSize: '0.6rem', color: alpha('#fff', 0.25), fontFamily: 'monospace', flexShrink: 0 }}>
+        {commit.sha.slice(0, 7)} · {time}
+      </Typography>
+    </Box>
+  )
+}
+
+// ─── Phase 2 — module progress card ──────────────────────────────────────────
+
+function Phase2ModuleCard({ moduleId, commits }: { moduleId: string; commits: CommitWithModule[] }) {
   const [open, setOpen] = useState(true)
   const meta = MODULE_META[moduleId]
   const color = meta?.color ?? '#6B7280'
-  const label = meta ? `${meta.icon} ${meta.label}` : `🔧 ${moduleId}`
-
-  const realCommits = commits.filter(c => !c.message.startsWith('Merge pull request'))
-
-  // Module sub-features that match this date's commits
   const mod = TRACKED_MODULES.find(m => m.id === moduleId)
-  const relatedFeatures = useMemo(() => {
+  const total = mod?.subFeatures.length ?? 0
+  const done = mod?.subFeatures.filter(f => f.done).length ?? 0
+  const pct = total ? Math.round((done / total) * 100) : 0
+
+  // Sub-features whose name keywords appear in any commit message
+  const commitText = commits.map(c => c.message.toLowerCase()).join(' ')
+  const matchedFeatures = useMemo(() => {
     if (!mod) return []
-    const commitText = commits.map(c => c.message.toLowerCase()).join(' ')
     return mod.subFeatures.filter(f => {
       const words = f.name.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(w => w.length >= 4)
       return words.some(w => commitText.includes(w))
     })
-  }, [mod, commits])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mod, commitText])
+
+  const realCommits = commits.filter(c => !c.message.startsWith('Merge pull request'))
 
   return (
-    <Box sx={{ borderRadius: '12px', border: `1px solid ${alpha(color, 0.2)}`, bgcolor: '#13131A', overflow: 'hidden', mb: 1 }}>
+    <Box sx={{ borderRadius: '14px', border: `1px solid ${alpha(color, 0.25)}`, bgcolor: '#13131A', overflow: 'hidden', mb: 1.5 }}>
+      {/* Header — progress bar prominent */}
       <Box
         onClick={() => setOpen(o => !o)}
-        sx={{ px: 2, py: 1.25, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 1.5,
-          '&:hover': { bgcolor: alpha('#fff', 0.02) },
-          borderBottom: open ? `1px solid ${alpha(color, 0.1)}` : 'none',
+        sx={{ px: 2.5, py: 1.5, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 1.5,
+          '&:hover': { bgcolor: alpha('#fff', 0.015) },
+          borderBottom: open ? `1px solid ${alpha(color, 0.12)}` : 'none',
         }}
       >
-        <Box sx={{ width: 6, height: 6, borderRadius: '50%', bgcolor: color, flexShrink: 0 }} />
-        <Typography sx={{ fontWeight: 700, fontSize: '0.875rem', flex: 1 }}>{label}</Typography>
-        <Chip label={`${realCommits.length} commit${realCommits.length !== 1 ? 's' : ''}`} size="small"
-          sx={{ height: 18, fontSize: '0.5rem', fontWeight: 700, bgcolor: alpha(color, 0.1), color, borderRadius: '5px' }} />
-        {relatedFeatures.length > 0 && (
-          <Chip label={`${relatedFeatures.length} feature${relatedFeatures.length !== 1 ? 's' : ''}`} size="small"
-            sx={{ height: 18, fontSize: '0.5rem', fontWeight: 700, bgcolor: alpha('#10B981', 0.1), color: '#10B981', borderRadius: '5px' }} />
-        )}
-        <IconButton size="small" sx={{ color: 'text.secondary', p: 0 }}>
-          {open ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+        <Typography sx={{ fontSize: '1.1rem', flexShrink: 0 }}>{meta?.icon ?? '🔧'}</Typography>
+        <Box sx={{ flex: 1, minWidth: 0 }}>
+          <Typography sx={{ fontWeight: 700, fontSize: '0.9375rem', mb: 0.5 }}>{meta?.label ?? moduleId}</Typography>
+          {/* Progress bar */}
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <LinearProgress
+              variant="determinate"
+              value={pct}
+              sx={{ flex: 1, height: 6, borderRadius: 3,
+                bgcolor: alpha(color, 0.12),
+                '& .MuiLinearProgress-bar': { bgcolor: color, borderRadius: 3 },
+              }}
+            />
+            <Typography sx={{ fontSize: '0.6875rem', fontWeight: 800, color, minWidth: 32, textAlign: 'right' }}>
+              {pct}%
+            </Typography>
+          </Box>
+          <Typography sx={{ fontSize: '0.625rem', color: alpha('#fff', 0.3), mt: 0.25 }}>
+            {done} / {total} sub-features done
+          </Typography>
+        </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 0.5, flexShrink: 0 }}>
+          <Chip label={`${realCommits.length} commit${realCommits.length !== 1 ? 's' : ''} today`} size="small"
+            sx={{ height: 18, fontSize: '0.5rem', fontWeight: 700, bgcolor: alpha(color, 0.1), color, borderRadius: '5px' }} />
+          {matchedFeatures.length > 0 && (
+            <Chip label={`${matchedFeatures.filter(f => f.done).length}/${matchedFeatures.length} features updated`} size="small"
+              sx={{ height: 18, fontSize: '0.5rem', fontWeight: 700, bgcolor: alpha('#10B981', 0.1), color: '#10B981', borderRadius: '5px' }} />
+          )}
+        </Box>
+        <IconButton size="small" sx={{ color: 'text.secondary', flexShrink: 0 }}>
+          {open ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
         </IconButton>
       </Box>
 
       <Collapse in={open}>
-        {/* Commits */}
-        {commits.map(c => <CommitRow key={c.sha} commit={c} />)}
-
-        {/* Related sub-features */}
-        {relatedFeatures.length > 0 && (
-          <Box sx={{ px: 2, py: 1, bgcolor: alpha('#10B981', 0.03), borderTop: `1px solid ${alpha('#10B981', 0.08)}` }}>
-            <Typography sx={{ fontSize: '0.6375rem', fontWeight: 700, color: alpha('#10B981', 0.7), textTransform: 'uppercase', letterSpacing: '0.07em', mb: 0.75 }}>
-              Related sub-features
+        {/* Commits pushed today */}
+        {realCommits.length > 0 && (
+          <Box>
+            <Typography sx={{ px: 2, pt: 1.25, pb: 0.5, fontSize: '0.6rem', fontWeight: 700, color: alpha(color, 0.7), textTransform: 'uppercase', letterSpacing: '0.07em' }}>
+              Commits pushed
             </Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-              {relatedFeatures.map(f => (
-                <Chip key={f.name} label={f.name} size="small"
-                  sx={{ height: 'auto', py: 0.25, fontSize: '0.6rem', fontWeight: 500, lineHeight: 1.4,
-                    bgcolor: alpha(f.done ? '#10B981' : '#6B7280', 0.1),
-                    color: f.done ? '#10B981' : alpha('#fff', 0.45),
-                    borderRadius: '5px', whiteSpace: 'normal', maxWidth: 280 }} />
-              ))}
-            </Box>
+            {commits.map(c => <CommitChip key={c.sha} commit={c} />)}
+          </Box>
+        )}
+
+        {/* Sub-features touched by these commits */}
+        {matchedFeatures.length > 0 && (
+          <Box sx={{ borderTop: `1px solid ${alpha('#fff', 0.04)}` }}>
+            <Typography sx={{ px: 2, pt: 1.25, pb: 0.5, fontSize: '0.6rem', fontWeight: 700, color: alpha('#10B981', 0.7), textTransform: 'uppercase', letterSpacing: '0.07em' }}>
+              Sub-features updated
+            </Typography>
+            {matchedFeatures.map(f => <Phase2FeatureRow key={f.name} name={f.name} done={f.done} />)}
+          </Box>
+        )}
+
+        {/* All module sub-features summary */}
+        {mod && mod.subFeatures.length > 0 && matchedFeatures.length === 0 && (
+          <Box sx={{ px: 2, py: 1.5 }}>
+            <Typography sx={{ fontSize: '0.75rem', color: alpha('#fff', 0.3) }}>
+              No specific sub-features matched these commits. {done}/{total} sub-features done overall.
+            </Typography>
           </Box>
         )}
       </Collapse>
@@ -379,26 +401,20 @@ function Phase2Tab() {
   const [selectedDay, setSelectedDay] = useState<string | null>(null)
 
   const commitsByDay = liveMeta.commitsByDay
-
   const activeDay = selectedDay ?? commitsByDay[0]?.date ?? null
 
   const enriched: CommitWithModule[] = useMemo(() => {
     const day = commitsByDay.find(d => d.date === activeDay)
     if (!day) return []
-    return day.commits.map(c => ({
-      ...c,
-      module: detectModule(c.message),
-    }))
+    return day.commits.map(c => ({ ...c, module: detectModule(c.message) }))
   }, [commitsByDay, activeDay])
 
-  // group by module, keeping insertion order
   const grouped = useMemo(() => {
     const map = new Map<string, CommitWithModule[]>()
     for (const c of enriched) {
       if (!map.has(c.module)) map.set(c.module, [])
       map.get(c.module)!.push(c)
     }
-    // sort by commit count desc
     return [...map.entries()].sort((a, b) => b[1].length - a[1].length)
   }, [enriched])
 
@@ -407,7 +423,7 @@ function Phase2Tab() {
   if (commitsByDay.length === 0) {
     return (
       <Box sx={{ py: 6, textAlign: 'center' }}>
-        <Typography sx={{ color: 'text.secondary', fontSize: '0.875rem' }}>No commit data yet. Run the fetch script or wait for the scheduled sync.</Typography>
+        <Typography sx={{ color: 'text.secondary', fontSize: '0.875rem' }}>No commit data yet — sync hasn't run yet.</Typography>
       </Box>
     )
   }
@@ -421,20 +437,16 @@ function Phase2Tab() {
           const isActive = day.date === activeDay
           const realCount = day.commits.filter(c => !c.message.startsWith('Merge pull request')).length
           return (
-            <Box
-              key={day.date}
-              onClick={() => setSelectedDay(day.date)}
-              sx={{
-                px: 1.5, py: 0.75, borderRadius: '10px', cursor: 'pointer',
-                border: '1px solid',
-                borderColor: isActive ? '#0F5BFF' : alpha('#fff', 0.08),
-                bgcolor: isActive ? alpha('#0F5BFF', 0.1) : 'transparent',
-                transition: 'all 0.15s',
-                '&:hover': { borderColor: isActive ? '#0F5BFF' : alpha('#fff', 0.2) },
-              }}
-            >
+            <Box key={day.date} onClick={() => setSelectedDay(day.date)} sx={{
+              px: 1.5, py: 0.75, borderRadius: '10px', cursor: 'pointer',
+              border: '1px solid',
+              borderColor: isActive ? '#0F5BFF' : alpha('#fff', 0.08),
+              bgcolor: isActive ? alpha('#0F5BFF', 0.1) : 'transparent',
+              transition: 'all 0.15s',
+              '&:hover': { borderColor: isActive ? '#0F5BFF' : alpha('#fff', 0.2) },
+            }}>
               <Typography sx={{ fontSize: '0.7rem', fontWeight: isActive ? 800 : 500, color: isActive ? '#0F5BFF' : 'text.secondary' }}>
-                {isToday ? 'Today' : new Date(day.date + 'T12:00:00').toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })}
+                {isToday ? '⚡ Today' : new Date(day.date + 'T12:00:00').toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })}
               </Typography>
               <Typography sx={{ fontSize: '0.5625rem', color: isActive ? alpha('#0F5BFF', 0.8) : alpha('#fff', 0.3) }}>
                 {realCount} commit{realCount !== 1 ? 's' : ''}
@@ -444,41 +456,35 @@ function Phase2Tab() {
         })}
       </Box>
 
-      {/* Summary row */}
-      <Box sx={{ p: 1.5, borderRadius: '10px', bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider', mb: 2, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <GitCommit size={14} color="#0F5BFF" />
+      {/* Summary bar */}
+      <Box sx={{ p: 1.5, borderRadius: '10px', bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider', mb: 2.5, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75 }}>
+          <GitCommit size={13} color="#0F5BFF" />
           <Typography sx={{ fontSize: '0.8125rem', fontWeight: 700 }}>{totalReal} commits</Typography>
         </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <Layers size={14} color="#8B5CF6" />
-          <Typography sx={{ fontSize: '0.8125rem', fontWeight: 700 }}>{grouped.length} module{grouped.length !== 1 ? 's' : ''} touched</Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75 }}>
+          <Layers size={13} color="#8B5CF6" />
+          <Typography sx={{ fontSize: '0.8125rem', fontWeight: 700 }}>{grouped.length} module{grouped.length !== 1 ? 's' : ''} updated</Typography>
         </Box>
         <Typography sx={{ ml: 'auto', fontSize: '0.6375rem', color: 'text.secondary' }}>
           synced {liveMeta.fetchedAt ? new Date(liveMeta.fetchedAt).toLocaleString() : '—'}
         </Typography>
       </Box>
 
-      {/* Grouped by module */}
+      {/* Module progress cards */}
       {grouped.length === 0 ? (
-        <Box sx={{ py: 4, textAlign: 'center' }}>
+        <Box sx={{ py: 5, textAlign: 'center' }}>
           <Typography sx={{ color: 'text.secondary', fontSize: '0.875rem' }}>No commits on this day.</Typography>
         </Box>
       ) : (
         grouped.map(([moduleId, commits]) => (
-          <Phase2ModuleGroup
-            key={moduleId}
-            moduleId={moduleId}
-            commits={commits}
-            date={activeDay ?? ''}
-          />
+          <Phase2ModuleCard key={moduleId} moduleId={moduleId} commits={commits} />
         ))
       )}
 
-      {/* Footer note */}
-      <Box sx={{ mt: 2, p: 1.5, borderRadius: '10px', bgcolor: alpha('#0F5BFF', 0.04), border: `1px solid ${alpha('#0F5BFF', 0.1)}` }}>
-        <Typography sx={{ fontSize: '0.6875rem', color: alpha('#fff', 0.4), lineHeight: 1.6 }}>
-          Commits are read from <strong style={{ color: alpha('#fff', 0.6) }}>frontend-dashboard-v2 @ main</strong> and auto-synced every 30 minutes. Module labels are inferred from commit message scope or keywords.
+      <Box sx={{ mt: 1.5, p: 1.5, borderRadius: '10px', bgcolor: alpha('#0F5BFF', 0.04), border: `1px solid ${alpha('#0F5BFF', 0.1)}` }}>
+        <Typography sx={{ fontSize: '0.6875rem', color: alpha('#fff', 0.35), lineHeight: 1.6 }}>
+          Auto-synced from <strong style={{ color: alpha('#fff', 0.55) }}>frontend-dashboard-v2 @ main</strong> every 30 min. Module labels inferred from commit scope/keywords.
         </Typography>
       </Box>
     </Box>
