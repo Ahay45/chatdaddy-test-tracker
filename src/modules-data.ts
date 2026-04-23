@@ -395,13 +395,13 @@ const STATIC: Record<string, StaticConfig> = {
 
       // ── Inbox Settings modal ──────────────────────────────────────────────
       { name: 'Inbox settings modal (gear icon)', done: true },
-      { name: 'Setting — Incognito mode (read without marking read)', done: true },
-      { name: 'Setting — Show channel name vs phone number', done: true },
-      { name: 'Setting — Full date format toggle', done: true },
-      { name: 'Setting — Hide scheduled messages toggle', done: true },
-      { name: 'Setting — Include archived chats by default', done: true },
-      { name: 'Setting — Warn on message flow edit', done: true },
-      { name: 'Setting — AI auto-suggest replies toggle', done: true },
+      { name: 'Setting — Incognito mode (read without marking read)', done: false },
+      { name: 'Setting — Show channel name vs phone number', done: false },
+      { name: 'Setting — Full date format toggle', done: false },
+      { name: 'Setting — Hide scheduled messages toggle', done: false },
+      { name: 'Setting — Include archived chats by default', done: false },
+      { name: 'Setting — Warn on message flow edit', done: false },
+      { name: 'Setting — AI auto-suggest replies toggle', done: false },
       { name: 'Setting — Auto-assign incoming (round-robin / least-busy / random)', done: true },
       { name: 'Setting — Working hours per-day schedule (with timezone)', done: true },
       { name: 'Setting — Notification preferences (new chat / mention / sound)', done: true },
@@ -411,7 +411,7 @@ const STATIC: Record<string, StaticConfig> = {
       { name: 'Message bubbles redesign (SaaS aesthetic)', done: true },
       { name: 'Profile image view', done: true },
     ],
-    notes: 'Inbox 97% complete. PR #15 (2026-04-23): inline date range calendar with presets, useUnreadState hook (manualUnreadIds in store, mark/unmark read), ChatRow + ChatList refactor, FilterPanel date filter uses ISO timestamps. PR #16 (2026-04-23): formatJid.ts utility for formatted phone/display names in ChatDetail + ChatList. Remaining: WA inline QR/OTP/sync pages, filter panel CRM stage + custom fields.',
+    notes: 'Inbox ~88% complete. PR #15 (2026-04-23): inline date range calendar with presets, useUnreadState hook (manualUnreadIds in store, mark/unmark read), ChatRow + ChatList refactor. PR #16: formatJid.ts for phone/display name formatting. InboxSettingsModal only has 4 settings so far (auto-assign, working hours, away reply, notifications) — Incognito, Hide Scheduled, Show channel name, Full date format, Include archived, Flow edit warning, AI auto-suggest are NOT YET built. Export chat (CSV) done. Group participants correctly hidden on non-group chats. Remaining: 7 InboxSettings toggles, WA inline QR/OTP/sync pages, filter panel CRM stage + custom fields.',
   },
 
   crm: {

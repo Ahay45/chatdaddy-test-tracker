@@ -297,29 +297,20 @@ function CommitChip({ commit }: { commit: CommitWithModule }) {
 
 function Phase2ModuleCard({ moduleId, commits }: { moduleId: string; commits: CommitWithModule[] }) {
   const [open, setOpen] = useState(true)
+  const [showPending, setShowPending] = useState(false)
   const meta = MODULE_META[moduleId]
   const color = meta?.color ?? '#6B7280'
   const mod = TRACKED_MODULES.find(m => m.id === moduleId)
-  const total = mod?.subFeatures.length ?? 0
-  const done = mod?.subFeatures.filter(f => f.done).length ?? 0
-  const pct = total ? Math.round((done / total) * 100) : 0
-
-  // Sub-features whose name keywords appear in any commit message
-  const commitText = commits.map(c => c.message.toLowerCase()).join(' ')
-  const matchedFeatures = useMemo(() => {
-    if (!mod) return []
-    return mod.subFeatures.filter(f => {
-      const words = f.name.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(w => w.length >= 4)
-      return words.some(w => commitText.includes(w))
-    })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mod, commitText])
-
+  const allFeatures = mod?.subFeatures ?? []
+  const doneFeatures = allFeatures.filter(f => f.done)
+  const pendingFeatures = allFeatures.filter(f => !f.done)
+  const total = allFeatures.length
+  const pct = total ? Math.round((doneFeatures.length / total) * 100) : 0
   const realCommits = commits.filter(c => !c.message.startsWith('Merge pull request'))
 
   return (
     <Box sx={{ borderRadius: '14px', border: `1px solid ${alpha(color, 0.25)}`, bgcolor: '#13131A', overflow: 'hidden', mb: 1.5 }}>
-      {/* Header — progress bar prominent */}
+      {/* Header */}
       <Box
         onClick={() => setOpen(o => !o)}
         sx={{ px: 2.5, py: 1.5, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 1.5,
@@ -330,31 +321,23 @@ function Phase2ModuleCard({ moduleId, commits }: { moduleId: string; commits: Co
         <Typography sx={{ fontSize: '1.1rem', flexShrink: 0 }}>{meta?.icon ?? '🔧'}</Typography>
         <Box sx={{ flex: 1, minWidth: 0 }}>
           <Typography sx={{ fontWeight: 700, fontSize: '0.9375rem', mb: 0.5 }}>{meta?.label ?? moduleId}</Typography>
-          {/* Progress bar */}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <LinearProgress
-              variant="determinate"
-              value={pct}
-              sx={{ flex: 1, height: 6, borderRadius: 3,
-                bgcolor: alpha(color, 0.12),
-                '& .MuiLinearProgress-bar': { bgcolor: color, borderRadius: 3 },
-              }}
-            />
-            <Typography sx={{ fontSize: '0.6875rem', fontWeight: 800, color, minWidth: 32, textAlign: 'right' }}>
-              {pct}%
-            </Typography>
+            <LinearProgress variant="determinate" value={pct}
+              sx={{ flex: 1, height: 6, borderRadius: 3, bgcolor: alpha(color, 0.12),
+                '& .MuiLinearProgress-bar': { bgcolor: color, borderRadius: 3 } }} />
+            <Typography sx={{ fontSize: '0.6875rem', fontWeight: 800, color, minWidth: 32, textAlign: 'right' }}>{pct}%</Typography>
           </Box>
           <Typography sx={{ fontSize: '0.625rem', color: alpha('#fff', 0.3), mt: 0.25 }}>
-            {done} / {total} sub-features done
+            {doneFeatures.length} / {total} sub-features done
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 0.5, flexShrink: 0 }}>
-          <Chip label={`${realCommits.length} commit${realCommits.length !== 1 ? 's' : ''} today`} size="small"
+          <Chip label={`${realCommits.length} commit${realCommits.length !== 1 ? 's' : ''}`} size="small"
             sx={{ height: 18, fontSize: '0.5rem', fontWeight: 700, bgcolor: alpha(color, 0.1), color, borderRadius: '5px' }} />
-          {matchedFeatures.length > 0 && (
-            <Chip label={`${matchedFeatures.filter(f => f.done).length}/${matchedFeatures.length} features updated`} size="small"
-              sx={{ height: 18, fontSize: '0.5rem', fontWeight: 700, bgcolor: alpha('#10B981', 0.1), color: '#10B981', borderRadius: '5px' }} />
-          )}
+          <Chip label={`${doneFeatures.length} done · ${pendingFeatures.length} pending`} size="small"
+            sx={{ height: 18, fontSize: '0.5rem', fontWeight: 700,
+              bgcolor: alpha(pendingFeatures.length === 0 ? '#10B981' : '#F59E0B', 0.1),
+              color: pendingFeatures.length === 0 ? '#10B981' : '#F59E0B', borderRadius: '5px' }} />
         </Box>
         <IconButton size="small" sx={{ color: 'text.secondary', flexShrink: 0 }}>
           {open ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
@@ -362,9 +345,9 @@ function Phase2ModuleCard({ moduleId, commits }: { moduleId: string; commits: Co
       </Box>
 
       <Collapse in={open}>
-        {/* Commits pushed today */}
+        {/* Commits */}
         {realCommits.length > 0 && (
-          <Box>
+          <Box sx={{ borderBottom: `1px solid ${alpha('#fff', 0.04)}` }}>
             <Typography sx={{ px: 2, pt: 1.25, pb: 0.5, fontSize: '0.6rem', fontWeight: 700, color: alpha(color, 0.7), textTransform: 'uppercase', letterSpacing: '0.07em' }}>
               Commits pushed
             </Typography>
@@ -372,22 +355,32 @@ function Phase2ModuleCard({ moduleId, commits }: { moduleId: string; commits: Co
           </Box>
         )}
 
-        {/* Sub-features touched by these commits */}
-        {matchedFeatures.length > 0 && (
-          <Box sx={{ borderTop: `1px solid ${alpha('#fff', 0.04)}` }}>
+        {/* Done sub-features */}
+        {doneFeatures.length > 0 && (
+          <Box>
             <Typography sx={{ px: 2, pt: 1.25, pb: 0.5, fontSize: '0.6rem', fontWeight: 700, color: alpha('#10B981', 0.7), textTransform: 'uppercase', letterSpacing: '0.07em' }}>
-              Sub-features updated
+              ✓ Done ({doneFeatures.length})
             </Typography>
-            {matchedFeatures.map(f => <Phase2FeatureRow key={f.name} name={f.name} done={f.done} />)}
+            {doneFeatures.map(f => <Phase2FeatureRow key={f.name} name={f.name} done={true} />)}
           </Box>
         )}
 
-        {/* All module sub-features summary */}
-        {mod && mod.subFeatures.length > 0 && matchedFeatures.length === 0 && (
-          <Box sx={{ px: 2, py: 1.5 }}>
-            <Typography sx={{ fontSize: '0.75rem', color: alpha('#fff', 0.3) }}>
-              No specific sub-features matched these commits. {done}/{total} sub-features done overall.
-            </Typography>
+        {/* Pending sub-features — collapsed by default */}
+        {pendingFeatures.length > 0 && (
+          <Box sx={{ borderTop: `1px solid ${alpha('#fff', 0.04)}` }}>
+            <Box onClick={e => { e.stopPropagation(); setShowPending(p => !p) }}
+              sx={{ px: 2, pt: 1.25, pb: 0.75, display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer',
+                '&:hover': { bgcolor: alpha('#fff', 0.015) } }}>
+              <Typography sx={{ flex: 1, fontSize: '0.6rem', fontWeight: 700, color: alpha('#F59E0B', 0.7), textTransform: 'uppercase', letterSpacing: '0.07em' }}>
+                ◯ Pending ({pendingFeatures.length})
+              </Typography>
+              <IconButton size="small" sx={{ color: alpha('#fff', 0.3), p: 0 }}>
+                {showPending ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+              </IconButton>
+            </Box>
+            <Collapse in={showPending}>
+              {pendingFeatures.map(f => <Phase2FeatureRow key={f.name} name={f.name} done={false} />)}
+            </Collapse>
           </Box>
         )}
       </Collapse>
