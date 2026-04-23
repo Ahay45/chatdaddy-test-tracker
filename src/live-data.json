@@ -1,304 +1,462 @@
 {
-  "fetchedAt": "2026-04-15T04:15:19.000Z",
-  "branch": "akil/review",
+  "fetchedAt": "2026-04-23T05:28:21.805Z",
+  "branch": "main",
   "commit": {
-    "sha": "38300dcde62a998317acce65d30b0b594cf23d49",
-    "shortSha": "c52faa5",
-    "message": "feat(localization): wire t() into sidebar nav, settings tabs, and compose bar",
-    "date": "2026-04-15T04:15:14Z"
+    "sha": "61973dbc6c7b1eb5585e36936c10e22d8c1c30c5",
+    "shortSha": "61973db",
+    "message": "Merge pull request #15 from chatdaddy/inbox-changes-fix",
+    "date": "2026-04-23T04:39:03Z"
   },
   "recentCommits": [
     {
-      "sha": "c52faa5",
-      "message": "feat(localization): wire t() into sidebar nav, settings tabs, and compose bar",
-      "date": "2026-04-15T04:15:14Z",
+      "sha": "61973dbc6c7b1eb5585e36936c10e22d8c1c30c5",
+      "message": "Merge pull request #15 from chatdaddy/inbox-changes-fix",
+      "date": "2026-04-23T04:39:03Z",
       "author": "Ahay45"
     },
     {
-      "sha": "9dfd512",
-      "message": "fix(localization): language selector apply button always enabled, active badge, success flash, better preferences UI",
-      "date": "2026-04-15T04:08:22Z",
+      "sha": "e313cef557ca22275ca6b9c7ecbdf0e93ec2482d",
+      "message": "feat: enhance date range filter with inline calendar and presets",
+      "date": "2026-04-23T04:26:44Z",
       "author": "Ahay45"
     },
     {
-      "sha": "6039fd9",
-      "message": "feat(localization): add 4-locale i18n system with language selector",
-      "date": "2026-04-15T04:01:43Z",
+      "sha": "bf18d548843bb85f5d118fba296288110f4b96ab",
+      "message": "Merge pull request #14 from chatdaddy/channel-page-refinement",
+      "date": "2026-04-22T10:03:44Z",
       "author": "Ahay45"
     },
     {
-      "sha": "d1b17c5",
-      "message": "feat(billing): build complete billing & subscriptions module",
-      "date": "2026-04-15T03:49:38Z",
+      "sha": "789ee6050dcacf1a24f6bb2badc9254fc97be1a2",
+      "message": "feat: add ChannelCreditConfirmDialog and PhoneLinkDialog components",
+      "date": "2026-04-22T09:54:01Z",
       "author": "Ahay45"
     },
     {
-      "sha": "aec41be",
-      "message": "feat(onboarding): build complete cinematic onboarding module",
-      "date": "2026-04-15T03:27:58Z",
+      "sha": "eb3aacb0adf66bcf2dd3ba01cb7694de1ace5a0c",
+      "message": "Merge pull request #13 from chatdaddy/contacts-filter-selection",
+      "date": "2026-04-22T07:18:47Z",
       "author": "Ahay45"
     },
     {
-      "sha": "3394762",
-      "message": "feat(appstore): add 14 ChatDaddy-specific integrations — Shopee, Tokopedia, Lazada, Shopline, Hotmart, Razorpay, Google Forms, Calendly, Booknetic, Hostex",
-      "date": "2026-04-15T03:08:42Z",
+      "sha": "939d916a27c3190a3b340950c7d942b30e772841",
+      "message": "feat: enhance BulkContactBar with tag management and assignment features",
+      "date": "2026-04-22T06:59:15Z",
       "author": "Ahay45"
     },
     {
-      "sha": "d0df715",
-      "message": "feat(appstore): notification list table view, message template tab, credentials dialog, external platform banner",
-      "date": "2026-04-15T03:03:40Z",
+      "sha": "d94c3f34832d8d0cb9696a5ee2be1e3beb627fd2",
+      "message": "Merge pull request #12 from chatdaddy/contact-changes",
+      "date": "2026-04-22T06:27:39Z",
       "author": "Ahay45"
     },
     {
-      "sha": "a56213d",
-      "message": "fix(admin): add p:3 padding inside all tab content panels",
-      "date": "2026-04-15T02:55:34Z",
+      "sha": "d454e0787f7f689d6be21f270aead9d442d3b5f2",
+      "message": "Refactor code structure for improved readability and maintainability",
+      "date": "2026-04-22T06:23:23Z",
       "author": "Ahay45"
     },
     {
-      "sha": "ed34f9b",
-      "message": "feat(admin): Pricing Editor (7 sections) + Feature Updates panel + all new tabs registered",
-      "date": "2026-04-15T02:47:18Z",
+      "sha": "c05137073505ce596843e3e3b50b75c06493cd98",
+      "message": "Merge pull request #11 from chatdaddy/inbox-fixes",
+      "date": "2026-04-22T03:37:36Z",
       "author": "Ahay45"
     },
     {
-      "sha": "0304c32",
-      "message": "feat(admin): Surveys panel — response list, rating/feature filters, component breakdown dialog, CSV export",
-      "date": "2026-04-15T02:45:49Z",
+      "sha": "ebd2d45808e42e727dd0803bfd0d06d9cb01258f",
+      "message": "feat: integrate AI suggestions into ComposeBar and enhance ReplySuggestionsPanel",
+      "date": "2026-04-22T03:20:44Z",
       "author": "Ahay45"
     },
     {
-      "sha": "723b791",
-      "message": "feat(admin): Plan Tracking panel, Company Analytics, Company Insights + new tabs",
-      "date": "2026-04-15T02:43:11Z",
+      "sha": "b74a90e7c1374e3d77ff824535faa5a0ec0651b8",
+      "message": "Merge pull request #10 from chatdaddy/Inbox-filter-refinement",
+      "date": "2026-04-21T05:23:36Z",
       "author": "Ahay45"
     },
     {
-      "sha": "d77b70b",
-      "message": "feat(admin): Channels panel — platform/state/team filters, WABA quality chips, CSV export",
-      "date": "2026-04-15T02:38:01Z",
+      "sha": "c5400272ea0b663da2229e431fcb7409602118b9",
+      "message": "New changes",
+      "date": "2026-04-20T10:20:06Z",
       "author": "Ahay45"
     },
     {
-      "sha": "0d93de7",
-      "message": "feat(admin): Teams 5-tab add/edit drawer (Details, Members, Subscriptions, Features, Onboarding)",
-      "date": "2026-04-15T02:35:29Z",
+      "sha": "fceeae74b351e1d3c377b9635c6be4baf60c40bb",
+      "message": "new changes",
+      "date": "2026-04-20T09:09:01Z",
       "author": "Ahay45"
     },
     {
-      "sha": "caf412a",
-      "message": "feat(admin): add RedemptionList, ManageSupportPlan to Coupons + Credits",
-      "date": "2026-04-15T02:29:25Z",
+      "sha": "76bf3f59ea290d491854920e9ed86bc9846e35f9",
+      "message": "Newchanges",
+      "date": "2026-04-20T08:04:23Z",
       "author": "Ahay45"
     },
     {
-      "sha": "eba2224",
-      "message": "feat(admin): rebuild Users panel with edit drawer and sub-components",
-      "date": "2026-04-15T02:26:16Z",
+      "sha": "c3e1b768dadfdc0423cc60d532bc1b6179a2a278",
+      "message": "Revert \"feat(inbox): remove saved filters section from Tags\"",
+      "date": "2026-04-20T06:03:06Z",
       "author": "Ahay45"
     },
     {
-      "sha": "4a7101a",
-      "message": "feat(admin): rebuild Announcements panel with full editor",
-      "date": "2026-04-15T02:24:22Z",
+      "sha": "7e9b734b8ea4f9353d522558823152aaa05a1ed5",
+      "message": "feat(inbox): remove saved filters section from Tags",
+      "date": "2026-04-20T06:02:02Z",
       "author": "Ahay45"
     },
     {
-      "sha": "9960748",
-      "message": "feat: rebuild Settings and Billing advanced features",
-      "date": "2026-04-15T02:08:17Z",
+      "sha": "62bc718957164002de8ed51f004167b568d4fe71",
+      "message": "Revert \"feat(inbox): remove saved filters section from Assignee, show plain member list\"",
+      "date": "2026-04-20T05:59:03Z",
       "author": "Ahay45"
     },
     {
-      "sha": "96652d4",
-      "message": "feat(campaigns): move campaigns into Marketing tab, replace dialog with full page",
-      "date": "2026-04-09T08:52:31Z",
+      "sha": "610ffe413af202bd82aa771dc95b05fb29475c89",
+      "message": "feat(inbox): remove saved filters section from Assignee, show plain member list",
+      "date": "2026-04-20T05:57:47Z",
       "author": "Ahay45"
     },
     {
-      "sha": "9f7bdcc",
-      "message": "fix(campaigns): resolve TypeScript build errors in campaigns module",
-      "date": "2026-04-09T08:49:41Z",
+      "sha": "afdb5442b6d78d4a5b449c446fdedd05ab0172c2",
+      "message": "feat(inbox): assignee section badge always shows 1 when any filter is active",
+      "date": "2026-04-20T05:54:34Z",
       "author": "Ahay45"
     },
     {
-      "sha": "a7cab89",
-      "message": "feat: add two-panel filter popover to CRM and automation panels",
-      "date": "2026-04-09T08:34:04Z",
+      "sha": "c33ff96a02b6fff80405679dd750b3c871ace988",
+      "message": "feat(inbox): hide assignee list when a saved filter is active",
+      "date": "2026-04-20T05:49:06Z",
       "author": "Ahay45"
     }
   ],
   "commitsByDay": [
     {
-      "date": "2026-04-15",
+      "date": "2026-04-23",
       "commits": [
         {
-          "sha": "c52faa5",
-          "message": "feat(localization): wire t() into sidebar nav, settings tabs, and compose bar",
-          "date": "2026-04-15T04:15:14Z",
+          "sha": "61973dbc6c7b1eb5585e36936c10e22d8c1c30c5",
+          "message": "Merge pull request #15 from chatdaddy/inbox-changes-fix",
+          "date": "2026-04-23T04:39:03Z",
           "author": "Ahay45"
         },
         {
-          "sha": "9dfd512",
-          "message": "fix(localization): language selector apply button always enabled, active badge, success flash, better preferences UI",
-          "date": "2026-04-15T04:08:22Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "6039fd9",
-          "message": "feat(localization): add 4-locale i18n system with language selector",
-          "date": "2026-04-15T04:01:43Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "d1b17c5",
-          "message": "feat(billing): build complete billing & subscriptions module",
-          "date": "2026-04-15T03:49:38Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "aec41be",
-          "message": "feat(onboarding): build complete cinematic onboarding module",
-          "date": "2026-04-15T03:27:58Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "3394762",
-          "message": "feat(appstore): add 14 ChatDaddy-specific integrations — Shopee, Tokopedia, Lazada, Shopline, Hotmart, Razorpay, Google Forms, Calendly, Booknetic, Hostex",
-          "date": "2026-04-15T03:08:42Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "d0df715",
-          "message": "feat(appstore): notification list table view, message template tab, credentials dialog, external platform banner",
-          "date": "2026-04-15T03:03:40Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "a56213d",
-          "message": "fix(admin): add p:3 padding inside all tab content panels",
-          "date": "2026-04-15T02:55:34Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "ed34f9b",
-          "message": "feat(admin): Pricing Editor (7 sections) + Feature Updates panel + all new tabs registered",
-          "date": "2026-04-15T02:47:18Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "0304c32",
-          "message": "feat(admin): Surveys panel — response list, rating/feature filters, component breakdown dialog, CSV export",
-          "date": "2026-04-15T02:45:49Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "723b791",
-          "message": "feat(admin): Plan Tracking panel, Company Analytics, Company Insights + new tabs",
-          "date": "2026-04-15T02:43:11Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "d77b70b",
-          "message": "feat(admin): Channels panel — platform/state/team filters, WABA quality chips, CSV export",
-          "date": "2026-04-15T02:38:01Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "0d93de7",
-          "message": "feat(admin): Teams 5-tab add/edit drawer (Details, Members, Subscriptions, Features, Onboarding)",
-          "date": "2026-04-15T02:35:29Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "caf412a",
-          "message": "feat(admin): add RedemptionList, ManageSupportPlan to Coupons + Credits",
-          "date": "2026-04-15T02:29:25Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "eba2224",
-          "message": "feat(admin): rebuild Users panel with edit drawer and sub-components",
-          "date": "2026-04-15T02:26:16Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "4a7101a",
-          "message": "feat(admin): rebuild Announcements panel with full editor",
-          "date": "2026-04-15T02:24:22Z",
-          "author": "Ahay45"
-        },
-        {
-          "sha": "9960748",
-          "message": "feat: rebuild Settings and Billing advanced features",
-          "date": "2026-04-15T02:08:17Z",
+          "sha": "e313cef557ca22275ca6b9c7ecbdf0e93ec2482d",
+          "message": "feat: enhance date range filter with inline calendar and presets",
+          "date": "2026-04-23T04:26:44Z",
           "author": "Ahay45"
         }
       ]
     },
     {
-      "date": "2026-04-09",
+      "date": "2026-04-22",
       "commits": [
         {
-          "sha": "96652d4",
-          "message": "feat(campaigns): move campaigns into Marketing tab, replace dialog with full page",
-          "date": "2026-04-09T08:52:31Z",
+          "sha": "bf18d548843bb85f5d118fba296288110f4b96ab",
+          "message": "Merge pull request #14 from chatdaddy/channel-page-refinement",
+          "date": "2026-04-22T10:03:44Z",
           "author": "Ahay45"
         },
         {
-          "sha": "9f7bdcc",
-          "message": "fix(campaigns): resolve TypeScript build errors in campaigns module",
-          "date": "2026-04-09T08:49:41Z",
+          "sha": "789ee6050dcacf1a24f6bb2badc9254fc97be1a2",
+          "message": "feat: add ChannelCreditConfirmDialog and PhoneLinkDialog components",
+          "date": "2026-04-22T09:54:01Z",
           "author": "Ahay45"
         },
         {
-          "sha": "a7cab89",
-          "message": "feat: add two-panel filter popover to CRM and automation panels",
-          "date": "2026-04-09T08:34:04Z",
+          "sha": "eb3aacb0adf66bcf2dd3ba01cb7694de1ace5a0c",
+          "message": "Merge pull request #13 from chatdaddy/contacts-filter-selection",
+          "date": "2026-04-22T07:18:47Z",
           "author": "Ahay45"
         },
         {
-          "sha": "d453fd0",
-          "message": "feat: add rebuild tracker dashboard at /rebuild-tracker",
-          "date": "2026-04-09T07:58:30Z",
+          "sha": "939d916a27c3190a3b340950c7d942b30e772841",
+          "message": "feat: enhance BulkContactBar with tag management and assignment features",
+          "date": "2026-04-22T06:59:15Z",
           "author": "Ahay45"
         },
         {
-          "sha": "5124d1f",
-          "message": "feat(inbox): wire full filter functionality from v1 — channels, tags AND/OR, assignee, date range",
-          "date": "2026-04-09T06:59:55Z",
+          "sha": "d94c3f34832d8d0cb9696a5ee2be1e3beb627fd2",
+          "message": "Merge pull request #12 from chatdaddy/contact-changes",
+          "date": "2026-04-22T06:27:39Z",
           "author": "Ahay45"
         },
         {
-          "sha": "263726c",
-          "message": "fix(ci): ignore ui-prototype in prettier, add webServer for e2e CI",
-          "date": "2026-04-09T06:47:08Z",
+          "sha": "d454e0787f7f689d6be21f270aead9d442d3b5f2",
+          "message": "Refactor code structure for improved readability and maintainability",
+          "date": "2026-04-22T06:23:23Z",
           "author": "Ahay45"
         },
         {
-          "sha": "ec0b302",
-          "message": "fix(ci): resolve e2e no-tests failure, enforce prettier via husky pre-commit hook",
-          "date": "2026-04-09T06:41:12Z",
+          "sha": "c05137073505ce596843e3e3b50b75c06493cd98",
+          "message": "Merge pull request #11 from chatdaddy/inbox-fixes",
+          "date": "2026-04-22T03:37:36Z",
           "author": "Ahay45"
         },
         {
-          "sha": "db59d44",
-          "message": "fix(ci): raise chunk limit to 1000KB for vendor-chatdaddy (generated API client)",
-          "date": "2026-04-09T04:55:23Z",
+          "sha": "ebd2d45808e42e727dd0803bfd0d06d9cb01258f",
+          "message": "feat: integrate AI suggestions into ComposeBar and enhance ReplySuggestionsPanel",
+          "date": "2026-04-22T03:20:44Z",
+          "author": "Ahay45"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-21",
+      "commits": [
+        {
+          "sha": "b74a90e7c1374e3d77ff824535faa5a0ec0651b8",
+          "message": "Merge pull request #10 from chatdaddy/Inbox-filter-refinement",
+          "date": "2026-04-21T05:23:36Z",
+          "author": "Ahay45"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-20",
+      "commits": [
+        {
+          "sha": "c5400272ea0b663da2229e431fcb7409602118b9",
+          "message": "New changes",
+          "date": "2026-04-20T10:20:06Z",
           "author": "Ahay45"
         },
         {
-          "sha": "9a3f322",
-          "message": "fix(typecheck): resolve exactOptionalPropertyTypes error in FilterPanel tags mapping",
-          "date": "2026-04-09T04:52:06Z",
+          "sha": "fceeae74b351e1d3c377b9635c6be4baf60c40bb",
+          "message": "new changes",
+          "date": "2026-04-20T09:09:01Z",
           "author": "Ahay45"
         },
         {
-          "sha": "d2f900e",
-          "message": "fix(inbox): use distinct chat area background to prevent blending with page bg",
-          "date": "2026-04-09T04:49:26Z",
+          "sha": "76bf3f59ea290d491854920e9ed86bc9846e35f9",
+          "message": "Newchanges",
+          "date": "2026-04-20T08:04:23Z",
           "author": "Ahay45"
+        },
+        {
+          "sha": "c3e1b768dadfdc0423cc60d532bc1b6179a2a278",
+          "message": "Revert \"feat(inbox): remove saved filters section from Tags\"",
+          "date": "2026-04-20T06:03:06Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "7e9b734b8ea4f9353d522558823152aaa05a1ed5",
+          "message": "feat(inbox): remove saved filters section from Tags",
+          "date": "2026-04-20T06:02:02Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "62bc718957164002de8ed51f004167b568d4fe71",
+          "message": "Revert \"feat(inbox): remove saved filters section from Assignee, show plain member list\"",
+          "date": "2026-04-20T05:59:03Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "610ffe413af202bd82aa771dc95b05fb29475c89",
+          "message": "feat(inbox): remove saved filters section from Assignee, show plain member list",
+          "date": "2026-04-20T05:57:47Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "afdb5442b6d78d4a5b449c446fdedd05ab0172c2",
+          "message": "feat(inbox): assignee section badge always shows 1 when any filter is active",
+          "date": "2026-04-20T05:54:34Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "c33ff96a02b6fff80405679dd750b3c871ace988",
+          "message": "feat(inbox): hide assignee list when a saved filter is active",
+          "date": "2026-04-20T05:49:06Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "7af4472c1853f8254d7bcd7a02b1cc28e218bca4",
+          "message": "feat(inbox): show assignee list in Assignee section filter",
+          "date": "2026-04-20T05:45:01Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "be0186a0b05d1ee3c4e5e527f564b86dd0a8d3f9",
+          "message": "feat(inbox): badge shows 1 when a saved filter is active",
+          "date": "2026-04-20T05:43:59Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "4f845bbeddc4b097be09728e060ea3d3c9f26b68",
+          "message": "feat(inbox): remove Tag Presets section from FilterPanel",
+          "date": "2026-04-20T05:32:06Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "9f17125a6a9ffd2d17177e78fd735852a19c35ef",
+          "message": "feat(inbox): wire TagFilterPopover into FilterPanel Tags section",
+          "date": "2026-04-20T05:29:39Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "ce671b0b028b00455dd455ab7d9ddfee8c8e0f5a",
+          "message": "feat(inbox): add TagFilterPopover mirroring AssigneeFilterPopover",
+          "date": "2026-04-20T05:24:43Z",
+          "author": "Ahay45"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-17",
+      "commits": [
+        {
+          "sha": "d49e8ddd10e8f31fcaab4924fe81f740371769c5",
+          "message": "Merge pull request #9 from chatdaddy/Chat-and-assignee",
+          "date": "2026-04-17T12:37:41Z",
+          "author": "Aseem Khandekar"
+        },
+        {
+          "sha": "f5a5ee164e06819f988ecc4a6e67fd07cadf8605",
+          "message": "fix(lint): resolve lint error and install missing eslint-plugin-unicorn",
+          "date": "2026-04-17T08:25:38Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "56a67c5ac2880932fbc067ecaf77f3a42e33b804",
+          "message": "refactor(inbox): unify all assignee popovers to shared AssigneePickerPopover",
+          "date": "2026-04-17T08:22:39Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "0220d842999cf9949b047bf8ffaaa4d915210d23",
+          "message": "fix(inbox): header assignee now reads from fresh contact query",
+          "date": "2026-04-17T08:13:03Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "e0bc812b434ec203772545a649bfa301e50a58a2",
+          "message": "feat(inbox): quick-assign from chat row + proper names in all assign toasts",
+          "date": "2026-04-17T08:10:29Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "2c4b2593015e0aca81452c8e847d809d44e18fa7",
+          "message": "feat(inbox): resolve assignee names and show in header + chat rows",
+          "date": "2026-04-17T08:05:39Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "f54bfc7532f4475f7055df2e4c2c604f30320828",
+          "message": "feat(inbox): assignee filter popover matching old chatdaddy UX",
+          "date": "2026-04-17T07:55:54Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "d0f9e732f0a73af617d9ab27dd504aaeb90b592e",
+          "message": "feat(inbox): inline assignee filter — no modal needed",
+          "date": "2026-04-17T07:50:31Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "938f3e9d4fc4dd33d89d9d106c907c9d84e4514c",
+          "message": "fix: remove inline assignee list from FilterPanel — modal is single source",
+          "date": "2026-04-17T07:43:35Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "0c43fb208debc86bfaa418dee2ccb150393009d8",
+          "message": "fix: assignee filter modal — independent builder state, multi-save flow",
+          "date": "2026-04-17T07:40:29Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "adbe428ae68a8219b04688bcd256cc85a7798381",
+          "message": "feat: rebuild saved assignee filters with full spec",
+          "date": "2026-04-17T07:34:53Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "19ca448cfba834cd61f3bf528044a59ea010fe81",
+          "message": "fix: saved assignee filters — reactive save, edit support, name-based saving",
+          "date": "2026-04-17T07:25:59Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "6b41c4f61da493a7af4735c0989bab69264bb3d4",
+          "message": "feat: add AssigneeFilterModal with Is/Is-Not operator, multi-select, presets",
+          "date": "2026-04-17T07:19:34Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "44015486a4329bbafa9d6f569645c074bebb0d22",
+          "message": "fix: wire up assignee filter to actually load correct contacts",
+          "date": "2026-04-17T07:06:55Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "5bd1940d96414a80e7316617938854b8fd6b8eaa",
+          "message": "feat: save assignee filter preset from assignee section",
+          "date": "2026-04-17T07:01:23Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "cfb36101ebf0a97562b31e51defa7842ce7bde48",
+          "message": "feat: rebuild AssignmentSection — complete with all functionalities",
+          "date": "2026-04-17T06:57:38Z",
+          "author": "Ahay45"
+        },
+        {
+          "sha": "d3f5268be3b9d99547792e88f9dff4e22ce056f2",
+          "message": "feat: migrate assignee feature from v1 — full inbox integration",
+          "date": "2026-04-17T06:49:35Z",
+          "author": "Ahay45"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-16",
+      "commits": [
+        {
+          "sha": "2f8b990a2ec7da6e298841d5ac81362da9749f54",
+          "message": "Merge pull request #8 from chatdaddy/v1",
+          "date": "2026-04-16T06:23:20Z",
+          "author": "Aseem Khandekar"
+        },
+        {
+          "sha": "003a2ff8b3f887c2d217d9ce28876fa835c58d82",
+          "message": "chore(ci): remove quality job — build already covers typecheck + lint",
+          "date": "2026-04-16T04:57:42Z",
+          "author": "Aseem Khandekar"
+        },
+        {
+          "sha": "bb21dd96674d7f2f82e6033ba21975d96516e714",
+          "message": "chore(ci): remove prettier check — eslint handles formatting",
+          "date": "2026-04-16T04:57:11Z",
+          "author": "Aseem Khandekar"
+        },
+        {
+          "sha": "87bdebf4005754d38a8156eeac51bace3671abda",
+          "message": "fix(ci): remove --max-warnings 0 from lint script so warnings don't fail CI",
+          "date": "2026-04-16T04:40:20Z",
+          "author": "Aseem Khandekar"
+        },
+        {
+          "sha": "49abff459015c4146d4040a8bd582bb801619893",
+          "message": "chore(ci): disable lark ticket sync until modules are mapped",
+          "date": "2026-04-16T04:31:45Z",
+          "author": "Aseem Khandekar"
+        },
+        {
+          "sha": "028a39084313c7d9f6dde9963e9909786dbc85a2",
+          "message": "fix(ci): remove @chatdaddy/eslint-config dep — rules already inlined",
+          "date": "2026-04-16T04:30:20Z",
+          "author": "Aseem Khandekar"
+        },
+        {
+          "sha": "9b857610899a4baa58692e279b020626f7f40268",
+          "message": "fix(ci): use explicit git+https URL for eslint-config in package.json",
+          "date": "2026-04-16T04:27:40Z",
+          "author": "Aseem Khandekar"
+        },
+        {
+          "sha": "8d6bc2a18aa8b6d61ed18ac859a6534ea5be7fca",
+          "message": "fix(ci): change eslint-config resolved URL to HTTPS in lock file",
+          "date": "2026-04-16T04:24:10Z",
+          "author": "Aseem Khandekar"
         }
       ]
     }
@@ -306,11 +464,16 @@
   "registeredRoutes": [
     "/auth",
     "/login",
+    "/signup",
+    "/reset-password",
+    "/verify-otp",
+    "/verify-email",
     "/",
     "/inbox",
     "/crm",
     "/broadcasts",
     "/flows",
+    "/flows/$flowId",
     "/dashboard",
     "/settings",
     "/admin",
@@ -320,136 +483,349 @@
     "/ai",
     "/appstore",
     "/shops",
-    "/billing",
-    "/onboarding",
-    "/onboarding/forgot-password",
-    "/onboarding/reset-password",
-    "/rebuild-tracker"
+    "/analytics"
   ],
   "modules": {
     "admin": {
       "id": "admin",
-      "fileCount": 14,
+      "fileCount": 13,
       "componentCount": 10,
       "hasStore": false,
       "hasQueries": true,
       "hasRoute": true,
       "isEmpty": false,
-      "files": []
+      "files": [
+        "src/modules/admin/components/AnnouncementsPanel.tsx",
+        "src/modules/admin/components/ChannelsPanel.tsx",
+        "src/modules/admin/components/CouponsPanel.tsx",
+        "src/modules/admin/components/CreditsPanel.tsx",
+        "src/modules/admin/components/PreferencesPanel.tsx",
+        "src/modules/admin/components/ProductsPanel.tsx",
+        "src/modules/admin/components/TeamDataPanel.tsx",
+        "src/modules/admin/components/TeamsPanel.tsx",
+        "src/modules/admin/components/TemplateApprovalPanel.tsx",
+        "src/modules/admin/components/UsersPanel.tsx"
+      ]
     },
     "ai": {
       "id": "ai",
-      "fileCount": 9,
-      "componentCount": 5,
-      "hasStore": false,
-      "hasQueries": true,
-      "hasRoute": true,
-      "isEmpty": false,
-      "files": []
-    },
-    "appstore": {
-      "id": "appstore",
-      "fileCount": 6,
-      "componentCount": 2,
-      "hasStore": false,
-      "hasQueries": true,
-      "hasRoute": true,
-      "isEmpty": false,
-      "files": []
-    },
-    "auth": {
-      "id": "auth",
-      "fileCount": 7,
-      "componentCount": 1,
-      "hasStore": false,
-      "hasQueries": true,
-      "hasRoute": true,
-      "isEmpty": false,
-      "files": []
-    },
-    "automation": {
-      "id": "automation",
-      "fileCount": 15,
-      "componentCount": 11,
-      "hasStore": false,
-      "hasQueries": true,
-      "hasRoute": true,
-      "isEmpty": false,
-      "files": []
-    },
-    "billing": {
-      "id": "billing",
-      "fileCount": 35,
-      "componentCount": 28,
-      "hasStore": true,
-      "hasQueries": true,
-      "hasRoute": true,
-      "isEmpty": false,
-      "files": []
-    },
-    "broadcasts": {
-      "id": "broadcasts",
-      "fileCount": 11,
-      "componentCount": 7,
-      "hasStore": false,
-      "hasQueries": true,
-      "hasRoute": true,
-      "isEmpty": false,
-      "files": []
-    },
-    "calls": {
-      "id": "calls",
-      "fileCount": 7,
-      "componentCount": 3,
-      "hasStore": false,
-      "hasQueries": true,
-      "hasRoute": true,
-      "isEmpty": false,
-      "files": []
-    },
-    "campaigns": {
-      "id": "campaigns",
-      "fileCount": 10,
-      "componentCount": 6,
-      "hasStore": true,
-      "hasQueries": true,
-      "hasRoute": false,
-      "isEmpty": false,
-      "files": []
-    },
-    "channels": {
-      "id": "channels",
-      "fileCount": 16,
-      "componentCount": 11,
-      "hasStore": false,
-      "hasQueries": true,
-      "hasRoute": true,
-      "isEmpty": false,
-      "files": []
-    },
-    "crm": {
-      "id": "crm",
-      "fileCount": 14,
+      "fileCount": 12,
       "componentCount": 9,
       "hasStore": true,
       "hasQueries": true,
       "hasRoute": true,
       "isEmpty": false,
-      "files": []
+      "files": [
+        "src/modules/ai/components/AIChatbotPanel.tsx",
+        "src/modules/ai/components/AICrmPanel.tsx",
+        "src/modules/ai/components/AiAgentTemplatesModal.tsx",
+        "src/modules/ai/components/ChatbotEditDrawer.tsx",
+        "src/modules/ai/components/CreateChatbotDialog.tsx",
+        "src/modules/ai/components/CreateKBDialog.tsx",
+        "src/modules/ai/components/KBDetailDrawer.tsx",
+        "src/modules/ai/components/KBDetailPanel.tsx",
+        "src/modules/ai/components/KnowledgeBasePanel.tsx"
+      ]
     },
-    "dashboard": {
-      "id": "dashboard",
-      "fileCount": 7,
-      "componentCount": 3,
+    "analytics": {
+      "id": "analytics",
+      "fileCount": 30,
+      "componentCount": 27,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/analytics/components/AddWidgetDialog.tsx",
+        "src/modules/analytics/components/AnalyticListLayoutViewer.tsx",
+        "src/modules/analytics/components/AnalyticsFilterBar.tsx",
+        "src/modules/analytics/components/DashboardSelector.tsx",
+        "src/modules/analytics/components/LastRefreshedIndicator.tsx",
+        "src/modules/analytics/components/MarketingPerformanceTab.tsx",
+        "src/modules/analytics/components/MetricTransformationEditor.tsx",
+        "src/modules/analytics/components/NewDashboardModal.tsx",
+        "src/modules/analytics/components/PerformanceTabs.tsx",
+        "src/modules/analytics/components/RequestEditAccessBanner.tsx",
+        "src/modules/analytics/components/SalesPerformanceTab.tsx",
+        "src/modules/analytics/components/ShareDashboardDialog.tsx",
+        "src/modules/analytics/components/SmartAnalysisPanel.tsx",
+        "src/modules/analytics/components/TeamAnalyticsView.tsx",
+        "src/modules/analytics/components/TimePeriodSelector.tsx",
+        "src/modules/analytics/components/UnsupportedViewportOverlay.tsx",
+        "src/modules/analytics/components/V1MigrationDialog.tsx",
+        "src/modules/analytics/components/WidgetGrid.tsx",
+        "src/modules/analytics/components/useIsSmallViewport.ts",
+        "src/modules/analytics/components/widgets/BarChartWidget.tsx",
+        "src/modules/analytics/components/widgets/FunnelChartWidget.tsx",
+        "src/modules/analytics/components/widgets/LineChartWidget.tsx",
+        "src/modules/analytics/components/widgets/PieChartWidget.tsx",
+        "src/modules/analytics/components/widgets/SnapshotWidget.tsx",
+        "src/modules/analytics/components/widgets/TableWidget.tsx",
+        "src/modules/analytics/components/widgets/WidgetShell.tsx",
+        "src/modules/analytics/components/widgets/widgetTypes.ts"
+      ]
+    },
+    "appstore": {
+      "id": "appstore",
+      "fileCount": 13,
+      "componentCount": 10,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/appstore/components/AddServiceDialog.tsx",
+        "src/modules/appstore/components/AppBrowserPanel.tsx",
+        "src/modules/appstore/components/AppInstallerDrawer.tsx",
+        "src/modules/appstore/components/AppStoreList.tsx",
+        "src/modules/appstore/components/ChromeExtensionPanel.tsx",
+        "src/modules/appstore/components/InstalledAppsPanel.tsx",
+        "src/modules/appstore/components/OAuthModal.tsx",
+        "src/modules/appstore/components/PaymentIntegrationsPanel.tsx",
+        "src/modules/appstore/components/ServiceConfigDrawer.tsx",
+        "src/modules/appstore/components/ServiceSetupInstructionsModal.tsx"
+      ]
+    },
+    "auth": {
+      "id": "auth",
+      "fileCount": 16,
+      "componentCount": 9,
       "hasStore": false,
       "hasQueries": true,
       "hasRoute": true,
       "isEmpty": false,
-      "files": []
+      "files": [
+        "src/modules/auth/components/AdminOnly.tsx",
+        "src/modules/auth/components/AuthCard.tsx",
+        "src/modules/auth/components/LoginPage.tsx",
+        "src/modules/auth/components/OtpConfirmScreen.tsx",
+        "src/modules/auth/components/PasswordResetPage.tsx",
+        "src/modules/auth/components/ScopeLock.tsx",
+        "src/modules/auth/components/SignupPage.tsx",
+        "src/modules/auth/components/VerifyEmailPage.tsx",
+        "src/modules/auth/components/VerifyOtpPage.tsx"
+      ]
+    },
+    "automation": {
+      "id": "automation",
+      "fileCount": 33,
+      "componentCount": 30,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/automation/components/AiFlowBuilderDialog.tsx",
+        "src/modules/automation/components/CreateFlowDialog.tsx",
+        "src/modules/automation/components/CreateKeywordDialog.tsx",
+        "src/modules/automation/components/EditKeywordDialog.tsx",
+        "src/modules/automation/components/FilterPopover.tsx",
+        "src/modules/automation/components/FlowBuilderPage.tsx",
+        "src/modules/automation/components/FlowDetailDrawer.tsx",
+        "src/modules/automation/components/KeywordExecutionHistoryModal.tsx",
+        "src/modules/automation/components/KeywordReplyPanel.tsx",
+        "src/modules/automation/components/MessageFlowsPanel.tsx",
+        "src/modules/automation/components/OfflineBotPanel.tsx",
+        "src/modules/automation/components/TemplateMarketPanel.tsx",
+        "src/modules/automation/components/TriggerHistoryDetailDrawer.tsx",
+        "src/modules/automation/components/TriggerHistoryPanel.tsx",
+        "src/modules/automation/components/flow-builder/AttachmentsPanel.tsx",
+        "src/modules/automation/components/flow-builder/ConflictBanner.tsx",
+        "src/modules/automation/components/flow-builder/ExportConfirmModal.tsx",
+        "src/modules/automation/components/flow-builder/FlowAnalyticsPanel.tsx",
+        "src/modules/automation/components/flow-builder/FlowCanvas.tsx",
+        "src/modules/automation/components/flow-builder/FlowMetadataModal.tsx",
+        "src/modules/automation/components/flow-builder/FlowSaveErrorsModal.tsx",
+        "src/modules/automation/components/flow-builder/FlowToolbar.tsx",
+        "src/modules/automation/components/flow-builder/GlobalBotPreviewModal.tsx",
+        "src/modules/automation/components/flow-builder/GuidedTour.tsx",
+        "src/modules/automation/components/flow-builder/NodeEditorPanel.tsx",
+        "src/modules/automation/components/flow-builder/NodeSidebar.tsx",
+        "src/modules/automation/components/flow-builder/NodeTypes.tsx",
+        "src/modules/automation/components/flow-builder/SelectFormModal.tsx",
+        "src/modules/automation/components/flow-builder/SelectionContextMenu.tsx",
+        "src/modules/automation/components/flow-builder/ShareFlowModal.tsx"
+      ]
+    },
+    "billing": {
+      "id": "billing",
+      "fileCount": 12,
+      "componentCount": 8,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/billing/components/BillingOverview.tsx",
+        "src/modules/billing/components/BillingVersionSwitch.tsx",
+        "src/modules/billing/components/CheckoutPanel.tsx",
+        "src/modules/billing/components/ManagePlan.tsx",
+        "src/modules/billing/components/PlanMigrationModal.tsx",
+        "src/modules/billing/components/PurchaseHistory.tsx",
+        "src/modules/billing/components/SubscriptionsPanel.tsx",
+        "src/modules/billing/components/TransactionHistory.tsx"
+      ]
+    },
+    "broadcasts": {
+      "id": "broadcasts",
+      "fileCount": 19,
+      "componentCount": 16,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/broadcasts/components/AdvancedSettingsSection.tsx",
+        "src/modules/broadcasts/components/BroadcastAnalytics.tsx",
+        "src/modules/broadcasts/components/BroadcastAnalyticsDrawer.tsx",
+        "src/modules/broadcasts/components/BroadcastProgressDialog.tsx",
+        "src/modules/broadcasts/components/BroadcastSpeedWarning.tsx",
+        "src/modules/broadcasts/components/BroadcastsPanel.tsx",
+        "src/modules/broadcasts/components/CampaignsPanel.tsx",
+        "src/modules/broadcasts/components/ConfirmDialog.tsx",
+        "src/modules/broadcasts/components/CreateBroadcastDialog.tsx",
+        "src/modules/broadcasts/components/CreateBroadcastPage.tsx",
+        "src/modules/broadcasts/components/CreateCampaignDialog.tsx",
+        "src/modules/broadcasts/components/EditBroadcastDialog.tsx",
+        "src/modules/broadcasts/components/PauseResumeCountdown.tsx",
+        "src/modules/broadcasts/components/ViewRecipientsModal.tsx",
+        "src/modules/broadcasts/components/WabaTierBanner.tsx",
+        "src/modules/broadcasts/components/advancedSettingsDefaults.ts"
+      ]
+    },
+    "calls": {
+      "id": "calls",
+      "fileCount": 10,
+      "componentCount": 7,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/calls/components/CallDetailDrawer.tsx",
+        "src/modules/calls/components/CallPopup.tsx",
+        "src/modules/calls/components/CallStats.tsx",
+        "src/modules/calls/components/CallUsingModal.tsx",
+        "src/modules/calls/components/CallsFilters.tsx",
+        "src/modules/calls/components/ManageChannelsDialog.tsx",
+        "src/modules/calls/components/VerifyNumberDialog.tsx"
+      ]
+    },
+    "campaigns": {
+      "id": "campaigns",
+      "fileCount": 8,
+      "componentCount": 6,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": false,
+      "isEmpty": false,
+      "files": [
+        "src/modules/campaigns/components/CampaignDetailDrawer.tsx",
+        "src/modules/campaigns/components/CampaignList.tsx",
+        "src/modules/campaigns/components/CampaignProgressBar.tsx",
+        "src/modules/campaigns/components/CampaignRow.tsx",
+        "src/modules/campaigns/components/CreateCampaignPage.tsx",
+        "src/modules/campaigns/components/DeleteCampaignDialog.tsx"
+      ]
+    },
+    "channels": {
+      "id": "channels",
+      "fileCount": 27,
+      "componentCount": 23,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/channels/components/AddChannelDialog.tsx",
+        "src/modules/channels/components/ChannelCard.tsx",
+        "src/modules/channels/components/ChannelCreditConfirmDialog.tsx",
+        "src/modules/channels/components/ChannelProfileDialog.tsx",
+        "src/modules/channels/components/ChannelSettingsDialog.tsx",
+        "src/modules/channels/components/ChannelStatusModal.tsx",
+        "src/modules/channels/components/ChannelsList.tsx",
+        "src/modules/channels/components/ConnectionAlertBanner.tsx",
+        "src/modules/channels/components/DeleteChannelDialog.tsx",
+        "src/modules/channels/components/IsvTermsDialog.tsx",
+        "src/modules/channels/components/PendingMessagesModal.tsx",
+        "src/modules/channels/components/ReconnectModal.tsx",
+        "src/modules/channels/components/SenderIdDialog.tsx",
+        "src/modules/channels/components/VerifyPhoneDialog.tsx",
+        "src/modules/channels/components/WabaCreatingAccountModal.tsx",
+        "src/modules/channels/components/onboarding/EmailOnboardingDialog.tsx",
+        "src/modules/channels/components/onboarding/InstagramOnboardingDialog.tsx",
+        "src/modules/channels/components/onboarding/MessengerOnboardingDialog.tsx",
+        "src/modules/channels/components/onboarding/MessengerPageSelectDialog.tsx",
+        "src/modules/channels/components/onboarding/PhoneLinkDialog.tsx",
+        "src/modules/channels/components/onboarding/QrScanDialog.tsx",
+        "src/modules/channels/components/onboarding/SmsOnboardingDialog.tsx",
+        "src/modules/channels/components/onboarding/WabaOnboardingDialog.tsx"
+      ]
+    },
+    "contacts": {
+      "id": "contacts",
+      "fileCount": 3,
+      "componentCount": 2,
+      "hasStore": false,
+      "hasQueries": false,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/contacts/components/ContactActiveHoursCard.tsx",
+        "src/modules/contacts/components/ContactDetailPanel.tsx"
+      ]
+    },
+    "crm": {
+      "id": "crm",
+      "fileCount": 20,
+      "componentCount": 16,
+      "hasStore": true,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/crm/components/BoardView.tsx",
+        "src/modules/crm/components/BulkContactBar.tsx",
+        "src/modules/crm/components/ContactDetail.tsx",
+        "src/modules/crm/components/ContactsFilterPanel.tsx",
+        "src/modules/crm/components/ContactsPanel.tsx",
+        "src/modules/crm/components/CreateBoardDialog.tsx",
+        "src/modules/crm/components/CreateContactDialog.tsx",
+        "src/modules/crm/components/CreateTicketDialog.tsx",
+        "src/modules/crm/components/CrmCustomFieldsPanel.tsx",
+        "src/modules/crm/components/DeleteContactsDialog.tsx",
+        "src/modules/crm/components/ImportContactsDialog.tsx",
+        "src/modules/crm/components/ManageBoardDialog.tsx",
+        "src/modules/crm/components/TagManagerPanel.tsx",
+        "src/modules/crm/components/TicketCard.tsx",
+        "src/modules/crm/components/TicketDetailDrawer.tsx",
+        "src/modules/crm/components/TicketMoreOptionsMenu.tsx"
+      ]
+    },
+    "dashboard": {
+      "id": "dashboard",
+      "fileCount": 13,
+      "componentCount": 10,
+      "hasStore": false,
+      "hasQueries": true,
+      "hasRoute": true,
+      "isEmpty": false,
+      "files": [
+        "src/modules/dashboard/components/ChannelCards.tsx",
+        "src/modules/dashboard/components/ExploringSection.tsx",
+        "src/modules/dashboard/components/FeatureUpdateModal.tsx",
+        "src/modules/dashboard/components/MessageTrendsChart.tsx",
+        "src/modules/dashboard/components/MobileViewButtons.tsx",
+        "src/modules/dashboard/components/OnboardingSteps.tsx",
+        "src/modules/dashboard/components/StatsCards.tsx",
+        "src/modules/dashboard/components/SupportAnalyticsDialog.tsx",
+        "src/modules/dashboard/components/TrialAchievementBanner.tsx",
+        "src/modules/dashboard/components/WABAIntroListener.tsx"
+      ]
     },
     "flow-builder": {
       "id": "flow-builder",
-      "fileCount": 0,
+      "fileCount": 1,
       "componentCount": 0,
       "hasStore": false,
       "hasQueries": false,
@@ -459,73 +835,162 @@
     },
     "inbox": {
       "id": "inbox",
-      "fileCount": 16,
-      "componentCount": 11,
+      "fileCount": 50,
+      "componentCount": 40,
       "hasStore": true,
       "hasQueries": true,
       "hasRoute": true,
       "isEmpty": false,
+      "files": [
+        "src/modules/inbox/components/AssigneeFilterModal.tsx",
+        "src/modules/inbox/components/AssigneeFilterPopover.tsx",
+        "src/modules/inbox/components/AssigneePickerPopover.tsx",
+        "src/modules/inbox/components/BulkActionBar.tsx",
+        "src/modules/inbox/components/CatalogSendDialog.tsx",
+        "src/modules/inbox/components/ChatDetail.tsx",
+        "src/modules/inbox/components/ChatHeaderActions.tsx",
+        "src/modules/inbox/components/ChatList.tsx",
+        "src/modules/inbox/components/ChatRow.tsx",
+        "src/modules/inbox/components/ComposeBar.tsx",
+        "src/modules/inbox/components/ExportChatDialog.tsx",
+        "src/modules/inbox/components/ExportGroupMembersDialog.tsx",
+        "src/modules/inbox/components/ExportMediaDialog.tsx",
+        "src/modules/inbox/components/FetchFromPlatformButton.tsx",
+        "src/modules/inbox/components/FilterPanel.tsx",
+        "src/modules/inbox/components/FilteredMessagesPanel.tsx",
+        "src/modules/inbox/components/ForwardMessageDialog.tsx",
+        "src/modules/inbox/components/GlobalSearchDrawer.tsx",
+        "src/modules/inbox/components/ImageLightbox.tsx",
+        "src/modules/inbox/components/InboxSettingsModal.tsx",
+        "src/modules/inbox/components/ManageCustomFieldsDialog.tsx",
+        "src/modules/inbox/components/MessageBubble.tsx",
+        "src/modules/inbox/components/MessageContextMenu.tsx",
+        "src/modules/inbox/components/MessageThread.tsx",
+        "src/modules/inbox/components/PaymentRequestDialog.tsx",
+        "src/modules/inbox/components/ReplySuggestionsPanel.tsx",
+        "src/modules/inbox/components/TagFilterPopover.tsx",
+        "src/modules/inbox/components/TagPickerPopover.tsx",
+        "src/modules/inbox/components/VoicePlayer.tsx",
+        "src/modules/inbox/components/compose/AttachmentPreviewBar.tsx",
+        "src/modules/inbox/components/compose/MsgFlowWarningModal.tsx",
+        "src/modules/inbox/components/compose/OrderMessageSelector.tsx",
+        "src/modules/inbox/components/compose/ScheduleMessagePopover.tsx",
+        "src/modules/inbox/components/compose/SimpleAudioPlayer.tsx",
+        "src/modules/inbox/components/compose/TemplateVariableInputDialog.tsx",
+        "src/modules/inbox/components/compose/WindowStatusBadges.tsx",
+        "src/modules/inbox/components/message-types/AosEvalBadge.tsx",
+        "src/modules/inbox/components/message-types/ClarifyTextView.tsx",
+        "src/modules/inbox/components/message-types/ListMessageView.tsx",
+        "src/modules/inbox/components/message-types/SubjectLineView.tsx"
+      ]
+    },
+    "localization": {
+      "id": "localization",
+      "fileCount": 0,
+      "componentCount": 0,
+      "hasStore": false,
+      "hasQueries": false,
+      "hasRoute": false,
+      "isEmpty": true,
       "files": []
+    },
+    "notifications": {
+      "id": "notifications",
+      "fileCount": 2,
+      "componentCount": 2,
+      "hasStore": false,
+      "hasQueries": false,
+      "hasRoute": false,
+      "isEmpty": false,
+      "files": [
+        "src/modules/notifications/components/NotificationCenter.tsx",
+        "src/modules/notifications/components/NotificationItem.tsx"
+      ]
     },
     "onboarding": {
       "id": "onboarding",
-      "fileCount": 38,
-      "componentCount": 30,
-      "hasStore": true,
+      "fileCount": 0,
+      "componentCount": 0,
+      "hasStore": false,
       "hasQueries": false,
-      "hasRoute": true,
-      "isEmpty": false,
+      "hasRoute": false,
+      "isEmpty": true,
       "files": []
     },
     "settings": {
       "id": "settings",
-      "fileCount": 18,
-      "componentCount": 14,
+      "fileCount": 14,
+      "componentCount": 11,
       "hasStore": false,
       "hasQueries": true,
       "hasRoute": true,
       "isEmpty": false,
-      "files": []
+      "files": [
+        "src/modules/settings/components/BillingSettings.tsx",
+        "src/modules/settings/components/DeveloperSettings.tsx",
+        "src/modules/settings/components/ExternalPlatformSettings.tsx",
+        "src/modules/settings/components/MembersSettings.tsx",
+        "src/modules/settings/components/NotificationsSettings.tsx",
+        "src/modules/settings/components/ProfileSettings.tsx",
+        "src/modules/settings/components/QuickRepliesSettings.tsx",
+        "src/modules/settings/components/ResetPasswordModal.tsx",
+        "src/modules/settings/components/SupportServiceModal.tsx",
+        "src/modules/settings/components/TeamSettings.tsx",
+        "src/modules/settings/components/WebhookUpsertModal.tsx"
+      ]
     },
     "shops": {
       "id": "shops",
-      "fileCount": 11,
-      "componentCount": 7,
+      "fileCount": 20,
+      "componentCount": 18,
       "hasStore": false,
       "hasQueries": true,
       "hasRoute": true,
       "isEmpty": false,
-      "files": []
+      "files": [
+        "src/modules/shops/components/CreateEditProductDialog.tsx",
+        "src/modules/shops/components/CustomOrderMenuDialog.tsx",
+        "src/modules/shops/components/DeleteConfirmDialog.tsx",
+        "src/modules/shops/components/ManageCategoriesDialog.tsx",
+        "src/modules/shops/components/OrderDetailDrawer.tsx",
+        "src/modules/shops/components/OrderFilterDrawer.tsx",
+        "src/modules/shops/components/OrderStatusChip.tsx",
+        "src/modules/shops/components/OrderStatusWorkflow.tsx",
+        "src/modules/shops/components/OrdersPanel.tsx",
+        "src/modules/shops/components/PaymentsPanel.tsx",
+        "src/modules/shops/components/ProductImageUpload.tsx",
+        "src/modules/shops/components/ProductImportCsvDialog.tsx",
+        "src/modules/shops/components/ProductImportExternalDialog.tsx",
+        "src/modules/shops/components/ProductsPanel.tsx",
+        "src/modules/shops/components/ShippingPanel.tsx",
+        "src/modules/shops/components/ShopDashboardPanel.tsx",
+        "src/modules/shops/components/ShopSettingsModal.tsx",
+        "src/modules/shops/components/ShopSetupWizard.tsx"
+      ]
     },
     "tools": {
       "id": "tools",
-      "fileCount": 12,
-      "componentCount": 8,
+      "fileCount": 15,
+      "componentCount": 13,
       "hasStore": false,
       "hasQueries": true,
       "hasRoute": true,
       "isEmpty": false,
-      "files": []
-    },
-    "analytics": {
-      "id": "analytics",
-      "fileCount": 15,
-      "componentCount": 12,
-      "hasStore": true,
-      "hasQueries": true,
-      "hasRoute": true,
-      "isEmpty": false,
-      "files": []
-    },
-    "localization": {
-      "id": "localization",
-      "fileCount": 8,
-      "componentCount": 3,
-      "hasStore": true,
-      "hasQueries": false,
-      "hasRoute": false,
-      "isEmpty": false,
-      "files": []
+      "files": [
+        "src/modules/tools/components/ConditionsModal.tsx",
+        "src/modules/tools/components/CouponsPanel.tsx",
+        "src/modules/tools/components/CreateFormDialog.tsx",
+        "src/modules/tools/components/CustomFieldsManagerPanel.tsx",
+        "src/modules/tools/components/FormDetailDialog.tsx",
+        "src/modules/tools/components/FormEditorDialog.tsx",
+        "src/modules/tools/components/FormsPanel.tsx",
+        "src/modules/tools/components/QRCanvas.tsx",
+        "src/modules/tools/components/QRGeneratorPanel.tsx",
+        "src/modules/tools/components/QuestionTypePickerPopover.tsx",
+        "src/modules/tools/components/SubmissionsDialog.tsx",
+        "src/modules/tools/components/WidgetBuilderPanel.tsx",
+        "src/modules/tools/components/ZapierPanel.tsx"
+      ]
     }
   }
 }
